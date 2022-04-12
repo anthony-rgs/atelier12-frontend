@@ -6,7 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet">
-
+    <script src="script.js" defer="">
+    </script>
     <title>L' Atelier</title>
 
 </head>
@@ -16,21 +17,23 @@
     <!-- Header -->
     <header>
         <img src="image/atelier-logo.svg" alt="Logo Atelier">
-        <div id="bar"></div>
+
+        <div id="bar-header"></div>
     </header>
 
     <!-- Section images -->
-    <img class="picture" src="fonds-de-commerce-pano-salon-coiffure-5-.png" alt="Photo intérieur de l'Atelier">
+    <!-- <img class="picture" alt="Photo intérieur de l'Atelier"> -->
+    <div class="picture"></div>
 
     <!-- Prices -->
     <div>
         <h1>Prix</h1>
         <div class="choices">
-            <button id="women">Femme</button>
+            <button class="active" id="women">Femme</button>
             <button id="men">Homme</button>
         </div>
 
-        <div class="women-price">
+        <div class="visible" id="women-price">
 
             <div class="line">
                 <p id="name">Coupe - Brushing</p>
@@ -86,14 +89,16 @@
             </div>
 
             <br>
+            <br>
 
             <div class="line">
                 <p id="name">Flash</p>
                 <p id="price">19 € / 29 €</p>
             </div>
-            <br>
 
             <br>
+            <br>
+
 
             <div class="line">
                 <p id="name">Décoloration Cheveux court</p>
@@ -112,6 +117,7 @@
                 <p id="price">48 € / 62 € / 72 €</p>
             </div>
 
+            <br>
             <br>
 
             <div class="line">
@@ -134,6 +140,68 @@
             </div>
             <p id="info">(Cheveux longs sur devis)</p>
         </div>
+
+        <div class="hidden" id="men-price">
+
+            <div class="line">
+                <p id="name">Shampooing Brushing</p>
+                <p id="price">19 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Coupe</p>
+                <p id="price">26 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Coupe Adolescent -18 ans</p>
+                <p id="price">24 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Coupe Enfant -10 ans</p>
+                <p id="price">19 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Taille de Barbe</p>
+                <p id="price">8 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Couleur</p>
+                <p id="price">33 € / 38 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Shampooing Américain</p>
+                <p id="price">25 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Balayage</p>
+                <p id="price">35 € / 45 € / 55 €</p>
+            </div>
+            <div id="little-bar"></div>
+
+            <div class="line">
+                <p id="name">Forfait Permanente</p>
+                <p id="price">66 €</p>
+            </div>
+            <p id="info">(Shampooing, Coupe, Permanente, Coiffage)</p>
+
+
+
+        </div>
+
+
     </div>
 
     <!-- Products -->
@@ -143,7 +211,7 @@
 
             <div class="product">
                 <img id="product-image" src="image/produit2.webp" alt="Produit">
-                <div class="line">
+                <div class="line-product">
                     <p id="name">L'Oréal</p>
                     <p id="price">24 €</p>
                 </div>
@@ -153,7 +221,7 @@
 
             <div class="product">
                 <img id="product-image" src="image/produit1.webp" alt="Produit">
-                <div class="line">
+                <div class="line-product">
                     <p id="name">L'Oréal</p>
                     <p id="price">20 €</p>
                 </div>
@@ -163,7 +231,7 @@
 
             <div class="product">
                 <img id="product-image" src="image/produit3.webp" alt="Produit">
-                <div class="line">
+                <div class="line-product">
                     <p id="name">L'Oréal</p>
                     <p id="price">27 €</p>
                 </div>
@@ -178,37 +246,96 @@
 
     <!-- Avis -->
     <div>
-        <div class="avis">
-            <h2>Name</h2>
-            <img id="star" src="image/star.svg">
-            <img src="image/star.svg">
-            <img src="image/star.svg">
-            <img src="image/star.svg">
-            <img src="image/star.svg">
+        <h1>Avis</h1>
+        <div class="block">
+            <div class="avis">
+                <h3 class="name">Margot Lambard</h3>
+                <img id="star" src="image/star.svg">
+                <img src="image/star.svg">
+                <img src="image/star.svg">
+                <img src="image/star.svg">
+                <img src="image/star.svg">
+            </div>
+            <!-- <div class="box-comment"> -->
+            <p class="comment"> <span>“ </span> Très bonne expérience dans ce salon où je suis allée pour la première fois. La coiffeuse a su écouter mes deman-des, me conseiller et me faire une coupe adaptée à ma nature de cheveux et envies. Personne très professionnelle.
+                Un salon dans lequel j’ai envie de retourner. <span> “</span>
+            </p>
+
+            <!-- </div> -->
+            <!-- <p class="date">Octobre 2020</p> -->
         </div>
-        <p class="comment"><span>“ </span> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint tempora ut libero neque facere similique magnam blanditiis vel reprehenderit, beatae ullam laborum iure? Deleniti aliquid quisquam iste, illum similique aperiam dolor
-            sit amet eum.<span> “</span></p>
-        <p class="date">Date</p>
+        <div class="carousel">
+            <button class="carousel-button" id="b1" onclick="commentNumber1()"></button>
+            <button class="carousel-button" id="b2" onclick="commentNumber2()"></button>
+            <button class="carousel-button" id="b3" onclick="commentNumber3()"></button>
+            <button class="carousel-button" id="b4" onclick="commentNumber4()"></button>
+            <button class="carousel-button" id="b5" onclick="commentNumber5()"></button>
+        </div>
+
     </div>
 
+    <!-- Open -->
+    <div class="place">
+        <div class="hour">
+            <h2>Horaires d'ouvertures</h2>
+
+            <div class="line-hours">
+                <p id="day">Lundi</p>
+                <p id="hour">Fermé</p>
+            </div>
+
+            <div class="line-hours">
+                <p id="day">Mardi</p>
+                <p id="hour">9:00 - 18:00</p>
+            </div>
+
+            <div class="line-hours">
+                <p id="day">Mercredi</p>
+                <p id="hour">9:00 - 18:00</p>
+            </div>
+
+            <div class="line-hours">
+                <p id="day">Jeudi</p>
+                <p id="hour">9:00 - 18:00</p>
+            </div>
+
+            <div class="line-hours">
+                <p id="day">Vendredi</p>
+                <p id="hour">9:00 - 18:00</p>
+            </div>
+
+            <div class="line-hours">
+                <p id="day">Samedi</p>
+                <p id="hour">9:00 - 18:00</p>
+            </div>
+
+            <div class="line-hours">
+                <p id="day">Dimanche</p>
+                <p id="hour">Fermé</p>
+            </div>
 
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+        </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.987815123511!2d2.3546398156395627!3d48.83937110999971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671f24beb256d%3A0x61c4fe50e85514fc!2s12%20Rue%20Geoffroy-Saint-Hilaire%2C%2075005%20Paris!5e0!3m2!1sfr!2sfr!4v1649702513626!5m2!1sfr!2sfr"
+            width="700" height="371" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div id="bar-footer"></div>
+
+        <div class="informations">
+            <div class="contact">
+                <img id="icon-footer" src="image/tel.svg" alt="icon tel">
+                <a id="num" href="tel:01.47.07.59.28">01.47.07.59.28</a>
+            </div>
+            <div class="adress">
+                <img id="icon-footer" src="image/ping.svg" alt="icon ping">
+                <a id="adress" href="https://www.google.com/maps/place/12+Rue+Geoffroy-Saint-Hilaire,+75005+Paris/@48.8393676,2.3546398,17z/data=!3m1!4b1!4m5!3m4!1s0x47e671f24beb256d:0x61c4fe50e85514fc!8m2!3d48.8393676!4d2.3568285" target="blank">12 rue Geoffroy-Saint-Hilaire 75005</a>
+            </div>
+        </div>
+
+    </footer>
 
 
 
