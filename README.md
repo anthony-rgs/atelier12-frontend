@@ -1,2 +1,3 @@
-# L'Atelier 
+### <p align="center"> L'Atelier • <a href="https://latelier12.fr" > voir le site </a> </p>
+
  In work...
