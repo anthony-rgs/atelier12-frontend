@@ -299,7 +299,11 @@ footer {
     cursor: pointer;
 }
 
-#b1 {
+.carousel-button.classic {
+    background-color: #B8B8B8;
+}
+
+.carousel-button.select {
     background-color: #5C61DA;
 }
 
