@@ -20,17 +20,6 @@ menBorder.addEventListener('click', () => {
     menBox.classList.add("visible")
 });
 
-
-let person = document.querySelector(".name");
-let comment = document.querySelector(".comment");
-
-let comment1 = document.getElementById("b1");
-let comment2 = document.getElementById("b2");
-let comment3 = document.getElementById("b3");
-let comment4 = document.getElementById("b4");
-let comment5 = document.getElementById("b5");
-
-let commentIndex = 0
 let commentList = [{
         name: "Charlie Verne",
         commentary: "<span>\“ </span>C'est toujours un plaisir de se faire couper les cheveux ici. J'ai pour habitude de traverser Paris pour venir, et j'en ressors toujours beau comme un camion (mais attention, un camion de luxe). <br> Les conseils sont toujours bons et justes, tous les sujets de discussion sont intéressants et on y est traité comme un roi, que ce soit la première fois ou la dixième fois que l'on vient. <br> Je recommande vivement à toutes celles et ceux cherchant une qualité de service exceptionnelle à un bon prix.<span> \“</span> <br><br>",
@@ -53,53 +42,26 @@ let commentList = [{
     }
 ]
 
-function loadComment(commentIndex) {
-    person.textContent = commentList[commentIndex].name;
-    comment.innerHTML = commentList[commentIndex].commentary;
+let person = document.querySelector(".name");
+let comment = document.querySelector(".comment");
+let num = 1
+
+function getComment (nb) {
+    for (let i = 1; i < 6; i++) {
+        const carouselBtn = document.querySelector(`#button-${i}`);
+        carouselBtn.classList.add('classic')    
+        carouselBtn.classList.remove('select')
+    }
+    person.textContent = commentList[nb-1].name;
+    comment.innerHTML = commentList[nb-1].commentary;
+    let carouselBtnSelect = document.querySelector(`#button-${nb}`);
+    carouselBtnSelect.classList.add('select')
+    num = nb
 }
 
-loadComment(0)
+getComment(num)
 
-
-function clearBilles() {
-    comment1.style.background = "#B8B8B8"
-    comment2.style.background = "#B8B8B8"
-    comment3.style.background = "#B8B8B8"
-    comment4.style.background = "#B8B8B8"
-    comment5.style.background = "#B8B8B8"
-}
-
-function commentNumber1() {
-    commentIndex = 0;
-    loadComment(commentIndex);
-    clearBilles()
-    comment1.style.background = "#5C61DA"
-}
-
-function commentNumber2() {
-    commentIndex = 1;
-    loadComment(commentIndex);
-    clearBilles()
-    comment2.style.background = "#5C61DA"
-}
-
-function commentNumber3() {
-    commentIndex = 2;
-    loadComment(commentIndex);
-    clearBilles()
-    comment3.style.background = "#5C61DA"
-}
-
-function commentNumber4() {
-    commentIndex = 3;
-    loadComment(commentIndex);
-    clearBilles()
-    comment4.style.background = "#5C61DA"
-}
-
-function commentNumber5() {
-    commentIndex = 4;
-    loadComment(commentIndex);
-    clearBilles()
-    comment5.style.background = "#5C61DA"
-}
+setTimeout(function() {
+    const newNum = num+1
+    getComment(newNum)
+},10000);
