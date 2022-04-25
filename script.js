@@ -29,12 +29,12 @@ let commentList = [
   {
     name: 'David Stevens',
     commentary:
-      "<span>“ </span>Je vous conseille vivement L'Atelier 12. <br> Tout y est : l'accueil, l'écoute, les conseils, le professionnalisme et des tarifs très corrects ! <br> Sandra est adorable. N'hésitez surtout pas.<span> “</span>",
+      "<span>“ </span>Je vous conseille vivement L'Atelier 12. Tout y est : l'accueil, l'écoute, les conseils, le professionnalisme et des tarifs très corrects ! <br> Sandra est adorable. N'hésitez surtout pas.<span> “</span>",
   },
   {
     name: 'Hervé Prade',
     commentary:
-      "<span>“ </span> Un super salon avec une super coiffeuse (Sandra) et un accueil chaleureux !! <br> Bref c'est devenu mon adresse pour me faire couper les cheveux à Paris. <br> N'hésitez pas vous ne le regretterez pas !<span> “</span>",
+      "<span>“ </span> Un super salon avec une super coiffeuse (Sandra) et un accueil chaleureux !! Bref c'est devenu mon adresse pour me faire couper les cheveux à Paris. <br> N'hésitez pas vous ne le regretterez pas !<span> “</span>",
   },
   {
     name: 'Catherine Poyet',
@@ -54,12 +54,12 @@ let commentList = [
   {
     name: 'Julie Fraysse',
     commentary:
-      '<span>“ </span>Super salon que je recommande vivement! <br> Je remercie Sandra pour son écoute, sa bonne humeur et son professionnalisme ! <span> “</span>',
+      '<span>“ </span>Super salon que je recommande vivement! Je remercie Sandra pour son écoute, sa bonne humeur et son professionnalisme ! <span> “</span>',
   },
   {
     name: 'Sensitive shiatsu',
     commentary:
-      '<span>“ </span>Je suis un client fidèle depuis plus de 10 ans (ça se fête!). <br> Elle répond à toutes mes demandes et elle est de bons conseils quand il faut. <br> Que demander de plus !  <span> “</span>',
+      '<span>“ </span>Je suis un client fidèle depuis plus de 10 ans (ça se fête!). Elle répond à toutes mes demandes et elle est de bons conseils quand il faut. <br> Que demander de plus !  <span> “</span>',
   },
   {
     name: 'Hélène Malaroda',
@@ -79,7 +79,7 @@ let commentList = [
   {
     name: 'Olivier Le Marois',
     commentary:
-      "<span>“ </span>L'Atelier est mon salon de coiffure depuis 4 ans. <br> Le résultat est toujours impeccable, parfaitement conforme à mes attentes, pour un prix plus que raisonnable. Et la patronne est charmante, ce qui ne gâche rien.<span> “</span>",
+      "<span>“ </span>L'Atelier est mon salon de coiffure depuis 4 ans. Le résultat est toujours impeccable, parfaitement conforme à mes attentes, pour un prix plus que raisonnable. Et la patronne est charmante, ce qui ne gâche rien.<span> “</span>",
   },
   {
     name: 'Pierre Tchelitcheff',
@@ -104,7 +104,7 @@ let commentList = [
   {
     name: 'Vincent André Jean Villemer',
     commentary:
-      '<span>“ </span> La patronne est sympa, souriante malgré le masque et très professionnelle. <br> Bien coiffé et paré pour les vacances au soleil ! <br> Allez-y sans inquiétude. <span> “</span>',
+      '<span>“ </span> La patronne est sympa, souriante malgré le masque et très professionnelle. Bien coiffé et paré pour les vacances au soleil ! <br> Allez-y sans inquiétude. <span> “</span>',
   },
   {
     name: 'Béatrice Terrasse',
@@ -114,7 +114,7 @@ let commentList = [
   {
     name: 'Théo',
     commentary:
-      "<span>“ </span> Sandra est charmante, très pro et toujours à l'heure. <br> Le salon est cosy et il n'y a qu'une seule coiffeuse ce qui permet un suivi de qualité, y compris sur les cheveux compliqués. <br> L'occasion de passer un bon moment sans avoir l'impression d'être pris pour du bétail. <span> “</span> <br> <br>",
+      "<span>“ </span> Sandra est charmante, très pro et toujours à l'heure. Le salon est cosy et il n'y a qu'une seule coiffeuse ce qui permet un suivi de qualité, y compris sur les cheveux compliqués. <br> L'occasion de passer un bon moment sans avoir l'impression d'être pris pour du bétail. <span> “</span> <br> <br>",
   },
   {
     name: 'Charlie Verne',
@@ -163,13 +163,19 @@ function getComment(nb) {
     commentList[randomCommentList[nb]].name
   document.querySelector('.comment').innerHTML =
     commentList[randomCommentList[nb]].commentary
-
   document.querySelector(`#button-${nb}`).classList.add('select')
+  num = nb
 }
 
 getComment(0)
 
-// setTimeout(function () {
-//   const newNum = num + 1
-//   getComment(newNum)
-// }, 10000)
+function timeout() {
+  setTimeout(function () {
+    if (num < randomCommentList.length - 1) num += 1
+    else num = 0
+    getComment(num)
+    timeout()
+  }, 10000)
+}
+
+timeout()
