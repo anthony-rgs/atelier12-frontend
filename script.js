@@ -44,7 +44,7 @@ let commentList = [
   {
     name: 'Romain Dufrene',
     commentary:
-      "<span>“ </span> Vous cherchez un salon professionnel, une coiffeuse attentionnée, disponible souriante et s'adaptant aux demandes de ses clients ? <br> N'attendez plus et foncez à l'Atelier !<span> “</span>",
+      "<span>“ </span> Vous cherchez un salon professionnel, une coiffeuse attentionnée, disponible, souriante et s'adaptant aux demandes de ses clients ? <br> N'attendez plus et foncez à l'Atelier !<span> “</span>",
   },
   {
     name: 'Karine Recci',
@@ -138,35 +138,36 @@ let commentList = [
   },
 ]
 
-// function getRandomComment() {
-//   const randomList = []
-//   for (let i = 1; i < 6; i++) {
-//     const randomComment = Math.floor(Math.random() * commentList.length)
-//     randomList.push(randomComment)
-//   }
-//   console.log(randomList)
-// }
+function getRandomComment() {
+  const randomList = []
+  for (let i = 1; i < 2; ) {
+    const randomComment = Math.floor(Math.random() * commentList.length)
+    if (randomList.includes(randomComment) == false) {
+      randomList.push(randomComment)
+    }
+    if (randomList.length == 5) {
+      return randomList
+    }
+  }
+}
 
-// getRandomComment()
-
-let person = document.querySelector('.name')
-let comment = document.querySelector('.comment')
-let num = 1
+const randomCommentList = getRandomComment()
 
 function getComment(nb) {
-  for (let i = 1; i < 6; i++) {
+  for (let i = 0; i < 5; i++) {
     const carouselBtn = document.querySelector(`#button-${i}`)
     carouselBtn.classList.add('classic')
     carouselBtn.classList.remove('select')
   }
-  person.textContent = commentList[nb - 1].name
-  comment.innerHTML = commentList[nb - 1].commentary
-  let carouselBtnSelect = document.querySelector(`#button-${nb}`)
-  carouselBtnSelect.classList.add('select')
-  num = nb
+  document.querySelector('.name').textContent =
+    commentList[randomCommentList[nb]].name
+  document.querySelector('.comment').innerHTML =
+    commentList[randomCommentList[nb]].commentary
+
+  document.querySelector(`#button-${nb}`).classList.add('select')
 }
 
-getComment(num)
+getComment(0)
 
 // setTimeout(function () {
 //   const newNum = num + 1
