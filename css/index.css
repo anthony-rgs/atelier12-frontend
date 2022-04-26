@@ -1,18 +1,5 @@
-body {
-  height: 100vh;
-  margin: 0;
-  padding: 30px 90px 0 90px;
-}
-
-#bar-header {
-  margin-top: 30px;
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  margin-bottom: 100px;
-}
-
 .picture {
+  margin-top: 100px;
   width: 1260;
   width: 100%;
   height: 500px;
@@ -204,8 +191,36 @@ span {
   font-size: 24px;
 }
 
+.carousel {
+  display: flex;
+  justify-content: center;
+  margin-top: -5px;
+}
+
+.carousel-button {
+  width: 12px;
+  height: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: #b8b8b8;
+  margin-right: 40px;
+  cursor: pointer;
+}
+
+.carousel-button.classic {
+  background-color: #b8b8b8;
+}
+
+.carousel-button.select {
+  background-color: #5c61da;
+}
+
+.box-comment {
+  float: left;
+}
+
 .place {
-  padding: 100px 0 40px 0;
+  padding-top: 100px;
   display: flex;
 }
 
@@ -242,70 +257,4 @@ h2 {
 iframe {
   margin-right: 0;
   margin-left: auto;
-}
-
-#bar-footer {
-  width: 100%;
-  height: 2px;
-  background-color: black;
-  margin-bottom: 60px;
-}
-
-footer {
-  margin-top: 100px;
-}
-
-.informations {
-  display: flex;
-  justify-content: space-around;
-  padding-bottom: 60px;
-}
-
-.contact,
-.adress {
-  display: flex;
-  justify-content: center;
-  height: 27px;
-}
-
-#icon-footer {
-  padding-right: 20px;
-}
-
-#adress,
-#num {
-  font-family: 'Avenir Heavy';
-  font-size: 18px;
-  color: #5c61da;
-  text-decoration: none;
-}
-
-/*  */
-
-.carousel {
-  display: flex;
-  justify-content: center;
-  margin-top: -5px;
-}
-
-.carousel-button {
-  width: 12px;
-  height: 12px;
-  border: none;
-  border-radius: 50%;
-  background-color: #b8b8b8;
-  margin-right: 40px;
-  cursor: pointer;
-}
-
-.carousel-button.classic {
-  background-color: #b8b8b8;
-}
-
-.carousel-button.select {
-  background-color: #5c61da;
-}
-
-.box-comment {
-  float: left;
 }

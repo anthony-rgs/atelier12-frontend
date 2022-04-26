@@ -1,0 +1,76 @@
+.filters {
+  padding: 50px 0 900px 0;
+  display: flex;
+}
+
+.filter {
+  margin-right: 100px;
+}
+
+.category,
+.brand,
+.price {
+  display: flex;
+  align-items: center;
+}
+
+button {
+  border: none;
+  padding-left: 0px;
+  padding-right: 50px;
+  cursor: pointer;
+
+  color: #5c61da;
+  background-color: transparent;
+  font-family: 'Avenir Heavy';
+  font-size: 1.2em;
+}
+
+.triangle {
+  border-top: 10px solid black;
+  border-right: 7px solid transparent;
+  border-left: 7px solid transparent;
+}
+
+ul {
+  padding: 0;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+
+  border: none;
+  border-bottom: solid 2px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-bottom: 10px;
+  width: max-content;
+
+  border-color: transparent;
+}
+
+li:after {
+  color: #5c61da;
+
+  display: block;
+  content: '';
+  border-bottom: solid 2px;
+
+  transform: scaleX(0);
+  transition: transform 250ms ease-in-out;
+}
+
+li:hover:after {
+  transform: scaleX(1);
+}
+
+li:after {
+  transform-origin: 0% 50%;
+}
+
+#filters-category,
+#filters-brand,
+#filters-price {
+  display: none;
+}
