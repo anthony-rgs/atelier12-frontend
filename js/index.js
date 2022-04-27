@@ -84,7 +84,7 @@ let commentList = [
   {
     name: 'Pierre Tchelitcheff',
     commentary:
-      "<span>“ </span>Sandra est toujours extrêmement attentionnée, agréable et à mon écoute. <br> Ma coupe est parfaite même si j'ai le crâne carré et les cheveux comme des crayons. <br> Cela fait 10 ans que je la suis jusqu'à son installation à cette adresse.<span> “</span>",
+      "<span>“ </span>Sandra est toujours extrêmement attentionnée, agréable et à mon écoute. Ma coupe est parfaite même si j'ai le crâne carré et les cheveux comme des crayons. <br> Cela fait 10 ans que je la suis jusqu'à son installation à cette adresse.<span> “</span>",
   },
   {
     name: 'Mouza Clémence',

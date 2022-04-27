@@ -8,8 +8,6 @@
     <title>L'Atelier 12</title>
     <link href="/css/products.css" rel="stylesheet">
     <link href="/css/global.css" rel="stylesheet">
-    <script src="/js/products.js" defer="">
-    </script>
 </head>
 
 <body>
@@ -22,47 +20,28 @@
     <!-- Filters -->
     <div class="filters">
 
-        <div class="filter">
-            <div class="category"> 
-                <button id="btn-category">Catégories</button>
-                <div class="triangle" id="triangle1"></div>
-            </div>
-            <div id="filters-category">
-                <ul>
-                    <li>Cheveux mouillés</li>
-                    <li>Cheveux secs</li>
-                </ul>
-            </div>
-        </div>
+        <details class="category">
+            <summary>Catégories<span></span></summary>
+            <li>Shampoings</li>
+            <li>Produits Coiffants</li>
+            <li>Soins</li>
+        </details>
 
-        <div class="filter">
-            <div class="brand"> 
-                <button id="btn-brand">Marques</button>
-                <div class="triangle" id="triangle2"></div>
-            </div>
-            <div id="filters-brand">
-                <ul>
-                    <li>L'Oréal</li>
-                    <li>Zalando</li>
-                    <li>Gucci</li>
-                    <li>Crocks</li>
-                    <li>Tomate</li>
-                </ul>
-            </div>
-        </div>
+        <details class="brand">
+            <summary>Marques<span></span></summary>
+                <li>L'Oréal</li>
+                <li>Coca</li>
+                <li>Louis Vuitton</li>
+                <li>Zara</li>
+        </details>
 
-        <div class="filter">
-            <div class="price"> 
-                <button id="btn-price">Prix</button>
-                <div class="triangle" id="triangle3"></div>
-            </div>  
-            <div id="filters-price">
-                <ul> 
-                    <li>Prix le plus bas</li>
-                    <li>Prix le plus élevé</li>
-                </ul>
-            </div>
-        </div> 
+
+        <details class="price">
+            <summary>Prix<span></span></summary>
+                <li>Prix le plus bas</li>
+                <li>Prix la plus élevé</li>
+        </details>
+
     </div>
 
 
@@ -83,5 +62,5 @@
         </div>
     </footer>
 </body>
-
+<script src="/js/products.js"> </script> 
 </html>
