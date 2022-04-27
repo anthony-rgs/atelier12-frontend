@@ -9,11 +9,11 @@
 //   }
 // }
 
-const details = [...document.querySelectorAll('details')]
-console.log(details)
+// const details = [...document.querySelectorAll('details')]
+// console.log(details)
 
-details.map((detail) => {
-  detail.addEventListener('click', (e) => {
-    e.target.classList.add('active')
-  })
-})
+// details.map((detail) => {
+//   detail.addEventListener('click', (e) => {
+//     e.target.classList.add('active')
+//   })
+// })
