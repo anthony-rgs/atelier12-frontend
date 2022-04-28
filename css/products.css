@@ -3,28 +3,14 @@
   display: flex;
 }
 
-.category,
-.brand,
-.price {
-  display: flex;
-  align-items: center;
+details {
+  margin-right: 100px;
 }
-
-/* summary::after {
-  content: ' ►';
-
-}
-details[open] summary:after {
-  content: ' ▼';
-
-} */
 
 summary {
   list-style: none;
   /* position: relative; */
   border: none;
-  margin-bottom: 20px;
-
   cursor: pointer;
 
   color: #5c61da;
@@ -33,22 +19,22 @@ summary {
   font-size: 1.2em;
 }
 
-details {
-  margin-right: 100px;
-}
-
 span {
   display: inline-block;
   margin-left: 30px;
   border-top: 10px solid black;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
+  transition: transform 200ms ease-in-out;
 }
 
-span.active  {
-  border-bottom: 7px solid transparent;
-  border-top: 7px solid transparent;
-  border-left: 10px solid black;
+span.active {
+  transform: rotate(90deg);
+}
+
+ul {
+  text-decoration: none;
+  padding: 0;
 }
 
 li {
@@ -64,6 +50,23 @@ li {
   width: max-content;
 
   border-color: transparent;
+
+  opacity: 0;
+  animation: fade-in 1.5s forwards;
+}
+
+/* details[open] li {
+  opacity: 0;
+  animation: fade-in 2s forwards;
+} */
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 li:after {
