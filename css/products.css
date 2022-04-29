@@ -29,8 +29,8 @@ span {
 
 ul {
   padding: 0;
+  max-height: 0;
 
-  height: 0px;
   overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
   -moz-transition: all 0.5s ease-in-out;
@@ -39,13 +39,11 @@ ul {
 }
 
 .menu:hover ul {
-  height: 100px;
+  height: max-content;
+  max-height: 100%;
 }
 
 li {
-  list-style: none;
-  cursor: pointer;
-
   border: none;
   border-bottom: solid 2px;
   padding-left: 0px;
@@ -54,6 +52,12 @@ li {
   width: max-content;
 
   border-color: transparent;
+  list-style: none;
+  cursor: pointer;
+}
+
+li:last-child {
+  margin-bottom: 0px;
 }
 
 li:after {
