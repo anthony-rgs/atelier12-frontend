@@ -3,16 +3,11 @@
   display: flex;
 }
 
-details {
+.menu {
   margin-right: 100px;
 }
 
-summary {
-  list-style: none;
-  /* position: relative; */
-  border: none;
-  cursor: pointer;
-
+h1 {
   color: #5c61da;
   background-color: transparent;
   font-family: 'Avenir Heavy';
@@ -25,22 +20,31 @@ span {
   border-top: 10px solid black;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
-  transition: transform 200ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
 
-span.active {
+.menu:hover span {
   transform: rotate(90deg);
 }
 
 ul {
-  text-decoration: none;
   padding: 0;
+
+  height: 0px;
+  overflow: hidden;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.menu:hover ul {
+  height: 100px;
 }
 
 li {
   list-style: none;
   cursor: pointer;
-  position: relative;
 
   border: none;
   border-bottom: solid 2px;
@@ -50,23 +54,6 @@ li {
   width: max-content;
 
   border-color: transparent;
-
-  opacity: 0;
-  animation: fade-in 1.5s forwards;
-}
-
-/* details[open] li {
-  opacity: 0;
-  animation: fade-in 2s forwards;
-} */
-
-@keyframes fade-in {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 
 li:after {

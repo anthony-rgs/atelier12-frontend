@@ -3,6 +3,11 @@ body {
   margin: 0;
   padding: 30px 90px 0 90px;
   font-family: 'Avenir';
+
+  -moz-user-select: none; /* Firefox */
+  -webkit-user-select: none; /* Chrome, Safari, Opéra */
+  -ms-user-select: none; /* Internet explorer, Edge */
+  user-select: none; /* Propriété standard */
 }
 
 #bar-header {
