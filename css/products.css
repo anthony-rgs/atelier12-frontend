@@ -1,5 +1,5 @@
 .filters {
-  padding: 50px 0 900px 0;
+  padding: 50px 0 100px 0;
   display: flex;
 }
 
@@ -7,7 +7,7 @@
   margin-right: 100px;
 }
 
-h1 {
+h3 {
   color: #5c61da;
   background-color: transparent;
   font-family: 'Avenir Heavy';
@@ -29,7 +29,9 @@ span {
 
 ul {
   padding: 0;
+  margin-top: -7px;
   max-height: 0;
+  position: absolute;
 
   overflow: hidden;
   -webkit-transition: all 0.5s ease-in-out;
@@ -48,7 +50,7 @@ li {
   border-bottom: solid 2px;
   padding-left: 0px;
   padding-right: 0px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
   width: max-content;
 
   border-color: transparent;
@@ -77,4 +79,20 @@ li:hover:after {
 
 li:after {
   transform-origin: 0% 50%;
+}
+
+.products {
+  padding: 0 50px 0 50px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 90px;
+}
+
+.line-product {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 5px;
 }

@@ -52,3 +52,30 @@ footer {
   color: #5c61da;
   text-decoration: none;
 }
+
+#name {
+  font-family: 'Avenir Medium';
+}
+
+#price {
+  font-family: 'Avenir Light';
+
+  color: #3d3d3d;
+}
+
+#info {
+  font-family: 'Avenir Book';
+  margin-top: -15px;
+}
+
+.product {
+  width: 276px;
+  height: 278px;
+  margin: auto;
+}
+
+#product-image {
+  width: 116px;
+  height: 166px;
+  margin: 10px 80px 0 80px;
+}
