@@ -1,4 +1,4 @@
-const baseUrl = 'http://localhost:1337'
+const baseUrl = 'https://my-strapi-app-7arb3.ondigitalocean.app'
 
 fetch(`${baseUrl}/api/produits?populate=*`)
   .then((res) => res.json())
