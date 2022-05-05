@@ -1,11 +1,12 @@
-const baseUrl = 'https://my-strapi-app-7arb3.ondigitalocean.app'
+const baseUrl = 'http://localhost:1337'
 
 fetch(`${baseUrl}/api/produits?populate=*`)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data.data[0].attributes.image.data[0].attributes)
+    console.log(data)
     data.data.forEach((productData) => {
       createProductElement(productData)
+      console.log(productData.attributes.image.data[0].attributes.url)
     })
   })
 
