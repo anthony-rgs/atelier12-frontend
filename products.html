@@ -11,6 +11,24 @@
 </head>
 
 <body>
+    <section class="product-page">
+        <div class="show-product">
+            <img src="image/products/produit2.webp" alt="image du produit">
+            <div class="right-block">
+                <button id="cross"></button>
+                <p id="show-brand">L'Oréal</p>
+                <p id="show-name">Blondifier Gloss</p>
+                <p id="show-describe1">Restructurant et illuminateur</p>
+                <p id="show-describe2">Pour cheveux blonds ou méchés</p>
+                <div class="show-info">
+                    <p id="show-price">22 € -</p>
+                    <p id="show-quantity">300ml</p>
+                </div>
+                <p>Produits uniquement disponibles en achat en magasin</p>
+            </div>
+        </div>
+    </section>
+
     <!-- Header -->
     <header>
         <a href='index.html'><img src="/image/atelier-logo.svg" alt="Logo Atelier"></a>
@@ -39,19 +57,21 @@
 
     <!-- Products -->
     <section class="products">
-
-        <template id="product">
+        <template id="product" onclick="productPage()">
             <div class="product">
                 <img id="product-image" src="" alt="Produit">
                 <div class="line-product">
-                    <p id="name"></p>
+                    <p id="brand"></p>
                     <p id="price"></p>
                 </div>
                 <p class="info" id="describe1"></p>
                 <p class="info" id="describe2"></p>
             </div>
         </template>
+
+
     </section>
+
 
     <!-- Footer -->
     <footer>

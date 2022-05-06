@@ -16,13 +16,13 @@ const products = document.querySelector('.products')
 function createProductElement(productData) {
   const clone = template.content.cloneNode(true)
   const img = clone.querySelector('#product-image')
-  const name = clone.querySelector('#name')
+  const brand = clone.querySelector('#brand')
   const price = clone.querySelector('#price')
   const describe1 = clone.querySelector('#describe1')
   const describe2 = clone.querySelector('#describe2')
 
   img.src = `${baseUrl + productData.attributes.image.data[0].attributes.url}`
-  name.textContent = productData.attributes.marque
+  brand.textContent = productData.attributes.marque
   price.textContent = `${productData.attributes.prix} €`
   describe1.textContent = productData.attributes.descriptif1
   describe2.textContent = productData.attributes.descriptif2

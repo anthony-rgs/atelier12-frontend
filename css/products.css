@@ -96,3 +96,90 @@ li:after {
   font-size: 20px;
   margin-bottom: 5px;
 }
+
+.product-page {
+  margin: -30px -90px 0 -90px;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+}
+
+.show-product {
+  background-color: white;
+  border-radius: 4px;
+  margin-left: 140px;
+  margin-right: 140px;
+
+  width: 100%;
+  height: fit-content;
+  display: flex;
+}
+
+#cross {
+  width: 20px;
+  height: 20px;
+}
+
+.show-product img {
+  width: 325px;
+  height: 470px;
+  margin-left: 100px;
+}
+
+.right-block {
+  margin-left: 150px;
+}
+
+#show-brand {
+  font-size: 2em;
+  font-family: 'Avenir Medium';
+  color: #5c61da;
+
+  margin: 80px 0 0 0;
+}
+
+#show-name {
+  font-size: 1.8em;
+  font-family: 'Avenir Medium';
+
+  margin: 40px 0 20px 0;
+}
+
+#show-describe1,
+#show-describe2 {
+  font-size: 1.5em;
+  font-family: 'Avenir Book';
+
+  margin: 0;
+}
+
+.show-info {
+  display: flex;
+  margin: 30px 0 30px 0;
+}
+
+#show-price {
+  font-size: 1.5em;
+  font-family: 'Avenir light';
+
+  margin: 0;
+}
+
+#show-quantity {
+  font-size: 1.2em;
+  font-family: 'Avenir light';
+
+  margin: 5px 0 0 7px;
+}
+
+.right-block p:nth-child(6) {
+  font-family: 'Avenir Book';
+  font-style: Oblique;
+  font-size: 0.9em;
+
+  margin: 0;
+}
