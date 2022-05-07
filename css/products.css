@@ -7,11 +7,16 @@
   margin-right: 100px;
 }
 
+.menu h3 {
+  cursor: pointer;
+}
+
 h3 {
   color: #5c61da;
   background-color: transparent;
   font-family: 'Avenir Heavy';
   font-size: 1.2em;
+  margin: 0;
 }
 
 span {
@@ -20,29 +25,31 @@ span {
   border-top: 10px solid black;
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
-  transition: transform 250ms ease-in-out;
+  transition: transform 200ms ease-in-out;
 }
 
-.menu:hover span {
+#span-price.filter,
+#span-category.filter {
   transform: rotate(90deg);
 }
 
 ul {
   padding: 0;
-  margin-top: -7px;
+  margin-top: 15px;
   max-height: 0;
   position: absolute;
 
   overflow: hidden;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
 }
 
-.menu:hover ul {
+#ul-category.filter,
+#ul-price.filter {
   height: max-content;
   max-height: 100%;
+  -webkit-transition: all 0.7s ease-in-out;
+  -moz-transition: all 0.7s ease-in-out;
+  -o-transition: all 0.7s ease-in-out;
+  transition: all 0.7s ease-in-out;
 }
 
 li {
@@ -97,10 +104,6 @@ li:after {
   margin-bottom: 5px;
 }
 
-#id {
-  display: none;
-}
-
 .product-page {
   margin: -30px -90px 0 -90px;
   width: 100vw;
@@ -114,14 +117,15 @@ li:after {
 
 .product-page.open {
   display: flex;
+  z-index: 1;
 }
 
 .container {
   position: relative;
   background-color: white;
   border-radius: 4px;
-  margin-left: 140px;
-  margin-right: 140px;
+  margin-left: 200px;
+  margin-right: 200px;
   width: 100%;
   height: fit-content;
 }
@@ -146,17 +150,17 @@ li:after {
 
 #cross:hover {
   background-image: url('/image/icon/cross-violet.svg');
-  /* transform: scale(0.9); */
 }
 
 .show-product img {
   width: 325px;
   height: 470px;
-  margin-left: 100px;
+  margin-left: 70px;
 }
 
 .right-block {
-  margin-left: 150px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #show-brand {

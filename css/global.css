@@ -52,17 +52,19 @@ footer {
   text-decoration: none;
 }
 
-#brand {
+#brand-product {
   font-family: 'Avenir Medium';
 }
 
-#price {
+#price-product {
   font-family: 'Avenir Light';
 
   color: #3d3d3d;
 }
 
-.info {
+#haircut-info,
+.info,
+.describe {
   font-family: 'Avenir Book';
   margin-top: -15px;
 }

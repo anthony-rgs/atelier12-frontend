@@ -42,8 +42,8 @@
     <!-- Filters -->
     <section class="filters">
         <div class="menu"> 
-            <h3>Catégories<span></span></h3>
-            <ul>
+            <h3 id="filter-category">Catégories<span id="span-category"></span></h3>
+            <ul id="ul-category">
                 <li>Shampoings</li>
                 <li>Produits Coiffants</li>
                 <li>Soins</li>
@@ -51,8 +51,8 @@
         </div>
 
         <div class="menu"> 
-            <h3>Prix<span></span></h3>
-            <ul>
+            <h3 id="filter-price">Prix<span id="span-price"></span></h3>
+            <ul  id="ul-price">
                 <li>Prix le plus bas</li>
                 <li>Prix le plus élevé</li>
             </ul>
@@ -62,16 +62,16 @@
     <!-- Products -->
     <section class="products">
         <template id="product" >
-            <div class="product" onclick="openProduct()">
+            <div class="product">
                 <img id="product-image" src="" alt="Produit">
                 <div class="line-product">
-                    <p id="brand"></p>
-                    <p id="price"></p>
+                    <p id="brand-product"></p>
+                    <p id="price-product"></p>
                 </div>
-                <p class="info" id="describe1"></p>
-                <p class="info" id="describe2"></p>
+                <p class="describe" id="describe1"></p>
+                <p class="describe" id="describe2"></p>
             </div>
-            <p id="id"></p>
+
         </template>
     </section>
 
