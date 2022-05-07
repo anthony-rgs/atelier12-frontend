@@ -97,31 +97,56 @@ li:after {
   margin-bottom: 5px;
 }
 
+#id {
+  display: none;
+}
+
 .product-page {
   margin: -30px -90px 0 -90px;
   width: 100vw;
   height: 100vh;
-  position: fixed;
 
   background-color: rgba(0, 0, 0, 0.5);
-  display: flex;
+  position: fixed;
+  display: none;
   align-items: center;
 }
 
-.show-product {
+.product-page.open {
+  display: flex;
+}
+
+.container {
+  position: relative;
   background-color: white;
   border-radius: 4px;
   margin-left: 140px;
   margin-right: 140px;
-
   width: 100%;
   height: fit-content;
+}
+
+.show-product {
   display: flex;
 }
 
 #cross {
   width: 20px;
   height: 20px;
+
+  position: absolute;
+
+  top: 20px;
+  right: 20px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  background-image: url('/image/icon/cross.svg');
+}
+
+#cross:hover {
+  background-image: url('/image/icon/cross-violet.svg');
+  /* transform: scale(0.9); */
 }
 
 .show-product img {
@@ -146,7 +171,7 @@ li:after {
   font-size: 1.8em;
   font-family: 'Avenir Medium';
 
-  margin: 40px 0 20px 0;
+  margin: 40px 0 10px 0;
 }
 
 #show-describe1,

@@ -1,5 +1,4 @@
 body {
-  height: 100vh;
   margin: 0;
   padding: 30px 90px 0 90px;
   font-family: 'Avenir';
@@ -53,7 +52,7 @@ footer {
   text-decoration: none;
 }
 
-#name {
+#brand {
   font-family: 'Avenir Medium';
 }
 
@@ -72,6 +71,8 @@ footer {
   width: 276px;
   height: 278px;
   margin: auto;
+
+  cursor: pointer;
 }
 
 #product-image {

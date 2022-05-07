@@ -12,21 +12,25 @@
 
 <body>
     <section class="product-page">
-        <div class="show-product">
-            <img src="image/products/produit2.webp" alt="image du produit">
-            <div class="right-block">
-                <button id="cross"></button>
-                <p id="show-brand">L'Oréal</p>
-                <p id="show-name">Blondifier Gloss</p>
-                <p id="show-describe1">Restructurant et illuminateur</p>
-                <p id="show-describe2">Pour cheveux blonds ou méchés</p>
-                <div class="show-info">
-                    <p id="show-price">22 € -</p>
-                    <p id="show-quantity">300ml</p>
+        <div class="container">
+            <div class="show-product">
+                <img id="show-image"src="" alt="image du produit">
+                <div class="right-block">
+                    <p id="show-brand"></p>
+                    <p id="show-name"></p>
+                    <p id="show-describe1"></p>
+                    <p id="show-describe2"></p>
+                    <div class="show-info">
+                        <p id="show-price"></p>
+                        <p id="show-quantity"></p>
+                    </div>
+                    <p>Produits uniquement disponibles en achat en magasin</p>
+                    <button id="cross"></button>
+
                 </div>
-                <p>Produits uniquement disponibles en achat en magasin</p>
             </div>
         </div>
+        
     </section>
 
     <!-- Header -->
@@ -57,8 +61,8 @@
 
     <!-- Products -->
     <section class="products">
-        <template id="product" onclick="productPage()">
-            <div class="product">
+        <template id="product" >
+            <div class="product" onclick="openProduct()">
                 <img id="product-image" src="" alt="Produit">
                 <div class="line-product">
                     <p id="brand"></p>
@@ -67,9 +71,8 @@
                 <p class="info" id="describe1"></p>
                 <p class="info" id="describe2"></p>
             </div>
+            <p id="id"></p>
         </template>
-
-
     </section>
 
 
