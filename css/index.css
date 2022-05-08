@@ -21,7 +21,7 @@ h1 {
 #women {
   border: none;
   border-bottom: solid 2px;
-  background-color: #fff;
+  background-color: transparent;
   cursor: pointer;
   font-family: Avenir-Medium;
   font-size: 28px;
@@ -90,7 +90,7 @@ h1 {
 }
 
 .name {
-  font-family: Avenir-Book;
+  font-family: Avenir-Roman;
 }
 
 .price {

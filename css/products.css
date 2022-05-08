@@ -184,12 +184,12 @@ li:after {
   font-size: 1.5em;
   font-family: Avenir-Book;
 
-  margin: 0;
+  margin-bottom: -10px;
 }
 
 .show-info {
   display: flex;
-  margin: 30px 0 30px 0;
+  margin: 40px 0 30px 0;
 }
 
 #show-price {
