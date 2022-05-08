@@ -1,7 +1,26 @@
+@font-face {
+  font-family: Avenir-Light;
+  src: url(fonts/Metropolis-Light.otf);
+}
+
+@font-face {
+  font-family: Avenir-Book;
+  src: url(fonts/TTNorms-Regular.otf);
+}
+
+@font-face {
+  font-family: Avenir-Medium;
+  src: url(fonts/Metropolis-Medium.otf);
+}
+
+@font-face {
+  font-family: Avenir-Heavy;
+  src: url(fonts/Metropolis-SemiBold.otf);
+}
+
 body {
   margin: 0;
   padding: 30px 90px 0 90px;
-  font-family: 'Avenir';
 
   -moz-user-select: none; /* Firefox */
   -webkit-user-select: none; /* Chrome, Safari, Opéra */
@@ -46,18 +65,18 @@ footer {
 
 #adress,
 #num {
-  font-family: 'Avenir Heavy';
+  font-family: Avenir-Heavy;
   font-size: 18px;
   color: #5c61da;
   text-decoration: none;
 }
 
 #brand-product {
-  font-family: 'Avenir Medium';
+  font-family: Avenir-Medium;
 }
 
 #price-product {
-  font-family: 'Avenir Light';
+  font-family: Avenir-Light;
 
   color: #3d3d3d;
 }
@@ -65,7 +84,7 @@ footer {
 #haircut-info,
 .info,
 .describe {
-  font-family: 'Avenir Book';
+  font-family: Avenir-Book;
   margin-top: -15px;
 }
 

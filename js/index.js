@@ -159,7 +159,7 @@ function getComment(nb) {
     carouselBtn.classList.add('classic')
     carouselBtn.classList.remove('select')
   }
-  document.querySelector('.name').textContent =
+  document.querySelector('#name').textContent =
     commentList[randomCommentList[nb]].name
   document.querySelector('.comment').innerHTML =
     commentList[randomCommentList[nb]].commentary

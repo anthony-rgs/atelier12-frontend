@@ -1,3 +1,36 @@
+// Open / Close filter
+const filterCategory = document.querySelector('#filter-category')
+const filterPrice = document.querySelector('#filter-price')
+const spanCategory = document.querySelector('#span-category')
+const spanPrice = document.querySelector('#span-price')
+const ulCategory = document.querySelector('#ul-category')
+const ulPrice = document.querySelector('#ul-price')
+
+filterCategory.addEventListener('click', () => {
+  spanPrice.classList.remove('filter')
+  ulPrice.classList.remove('filter')
+  if (spanCategory.classList.contains('filter')) {
+    spanCategory.classList.remove('filter')
+    ulCategory.classList.remove('filter')
+  } else {
+    spanCategory.classList.add('filter')
+    ulCategory.classList.add('filter')
+  }
+})
+
+filterPrice.addEventListener('click', () => {
+  spanCategory.classList.remove('filter')
+  ulCategory.classList.remove('filter')
+  if (spanPrice.classList.contains('filter')) {
+    spanPrice.classList.remove('filter')
+    ulPrice.classList.remove('filter')
+  } else {
+    spanPrice.classList.add('filter')
+    ulPrice.classList.add('filter')
+  }
+})
+
+// Get products from strapi
 const baseUrl = 'http://localhost:1337'
 
 fetch(`${baseUrl}/api/produits?populate=*`)
@@ -6,8 +39,7 @@ fetch(`${baseUrl}/api/produits?populate=*`)
     console.log(data)
     data.data.forEach((productData) => {
       const productElement = createProductElement(productData)
-      console.log(productElement)
-
+      // Show product selected
       productElement.addEventListener('click', () => {
         page.classList.add('open')
         productPage(productData)
@@ -15,6 +47,7 @@ fetch(`${baseUrl}/api/produits?populate=*`)
     })
   })
 
+// Create product for the products page
 const template = document.querySelector('template#product')
 const products = document.querySelector('.products')
 
@@ -36,6 +69,7 @@ function createProductElement(productData) {
   return Array.from(products.querySelectorAll('.product')).at(-1)
 }
 
+// Create product for the product selected box
 function productPage(productData) {
   const img = document.querySelector('#show-image')
   const nameProduct = document.querySelector('#show-name')
@@ -54,6 +88,7 @@ function productPage(productData) {
   describe2.textContent = productData.attributes.descriptif2
 }
 
+// Open / Close product selected box
 const cross = document.querySelector('#cross')
 const page = document.querySelector('.product-page')
 
@@ -63,37 +98,4 @@ function openProduct() {
 
 cross.addEventListener('click', () => {
   page.classList.remove('open')
-})
-
-// Filter Open / Close
-const filterCategory = document.querySelector('#filter-category')
-const filterPrice = document.querySelector('#filter-price')
-const spanCategory = document.querySelector('#span-category')
-const spanPrice = document.querySelector('#span-price')
-const ulCategory = document.querySelector('#ul-category')
-const ulPrice = document.querySelector('#ul-price')
-
-filterCategory.addEventListener('click', () => {
-  spanPrice.classList.remove('filter')
-  ulPrice.classList.remove('filter')
-
-  if (spanCategory.classList.contains('filter')) {
-    spanCategory.classList.remove('filter')
-    ulCategory.classList.remove('filter')
-  } else {
-    spanCategory.classList.add('filter')
-    ulCategory.classList.add('filter')
-  }
-})
-
-filterPrice.addEventListener('click', () => {
-  spanCategory.classList.remove('filter')
-  ulCategory.classList.remove('filter')
-  if (spanPrice.classList.contains('filter')) {
-    spanPrice.classList.remove('filter')
-    ulPrice.classList.remove('filter')
-  } else {
-    spanPrice.classList.add('filter')
-    ulPrice.classList.add('filter')
-  }
 })

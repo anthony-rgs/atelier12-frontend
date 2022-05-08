@@ -8,7 +8,7 @@ h1 {
   padding: 100px 0 0 0;
   margin: 0;
   font-size: 34px;
-  font-family: 'Avenir Heavy';
+  font-family: Avenir-Heavy;
 }
 
 .choices {
@@ -23,7 +23,7 @@ h1 {
   border-bottom: solid 2px;
   background-color: #fff;
   cursor: pointer;
-  font-family: 'Avenir Medium';
+  font-family: Avenir-Medium;
   font-size: 28px;
   border-color: transparent;
   color: #5c61da;
@@ -89,7 +89,16 @@ h1 {
   font-size: 20px;
 }
 
-#little-bar {
+.name {
+  font-family: Avenir-Book;
+}
+
+.price {
+  font-family: Avenir-Light;
+  color: #141414;
+}
+
+.little-bar {
   width: 100%;
   height: 2px;
   background-color: #b8b8b8;
@@ -121,7 +130,7 @@ h1 {
   cursor: pointer;
   border: none;
   background-color: transparent;
-  font-family: 'Avenir Medium';
+  font-family: Avenir-Medium;
   color: #5c61da;
   padding-left: 0px;
   padding-right: 0px;
@@ -138,8 +147,8 @@ h1 {
   display: flex;
 }
 
-h3 {
-  font-family: 'Avenir Medium';
+#name {
+  font-family: Avenir-Medium;
   font-size: 22px;
   margin: 0;
 }
@@ -153,14 +162,14 @@ h3 {
 }
 
 .comment {
-  font-family: 'Avenir Book';
+  font-family: Avenir-Book;
   font-size: 18px;
   line-height: 30px;
   height: 160px;
 }
 
 span {
-  font-family: 'Avenir Heavy';
+  font-family: Avenir-Heavy;
   font-size: 24px;
 }
 
@@ -197,7 +206,7 @@ span {
   display: flex;
 }
 
-.hour {
+.hours {
   width: 460px;
   height: 370px;
   margin-left: 0;
@@ -207,7 +216,7 @@ span {
 h2 {
   margin-top: 0;
   font-size: 24px;
-  font-family: 'Avenir Medium';
+  font-family: Avenir-Medium;
 }
 
 .line-hours {
@@ -217,13 +226,13 @@ h2 {
   margin-bottom: 20px;
 }
 
-#day {
-  font-family: 'Avenir Heavy';
+.day {
+  font-family: Avenir-Medium;
   font-size: 18px;
 }
 
-#hour {
-  font-family: 'Avenir Light';
+.hour {
+  font-family: Avenir-Light;
   font-size: 18px;
 }
 

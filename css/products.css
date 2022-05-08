@@ -14,7 +14,7 @@
 h3 {
   color: #5c61da;
   background-color: transparent;
-  font-family: 'Avenir Heavy';
+  font-family: Avenir-Heavy;
   font-size: 1.2em;
   margin: 0;
 }
@@ -63,6 +63,7 @@ li {
   border-color: transparent;
   list-style: none;
   cursor: pointer;
+  font-family: Avenir-Book;
 }
 
 li:last-child {
@@ -77,7 +78,7 @@ li:after {
   border-bottom: solid 2px;
 
   transform: scaleX(0);
-  transition: transform 200ms ease-in-out;
+  transition: transform 250ms ease-in-out;
 }
 
 li:hover:after {
@@ -165,7 +166,7 @@ li:after {
 
 #show-brand {
   font-size: 2em;
-  font-family: 'Avenir Medium';
+  font-family: Avenir-Medium;
   color: #5c61da;
 
   margin: 80px 0 0 0;
@@ -173,7 +174,7 @@ li:after {
 
 #show-name {
   font-size: 1.8em;
-  font-family: 'Avenir Medium';
+  font-family: Avenir-Medium;
 
   margin: 40px 0 10px 0;
 }
@@ -181,7 +182,7 @@ li:after {
 #show-describe1,
 #show-describe2 {
   font-size: 1.5em;
-  font-family: 'Avenir Book';
+  font-family: Avenir-Book;
 
   margin: 0;
 }
@@ -193,20 +194,20 @@ li:after {
 
 #show-price {
   font-size: 1.5em;
-  font-family: 'Avenir light';
+  font-family: Avenir-Light;
 
   margin: 0;
 }
 
 #show-quantity {
   font-size: 1.2em;
-  font-family: 'Avenir light';
+  font-family: Avenir-Light;
 
   margin: 5px 0 0 7px;
 }
 
 .right-block p:nth-child(6) {
-  font-family: 'Avenir Book';
+  font-family: Avenir-Book;
   font-style: Oblique;
   font-size: 0.9em;
 
