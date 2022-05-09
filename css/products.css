@@ -1,14 +1,15 @@
 .filters {
   padding: 50px 0 100px 0;
   display: flex;
+  justify-content: space-between;
+}
+
+.classics-menus {
+  display: flex;
 }
 
 .menu {
   margin-right: 100px;
-}
-
-.menu h3 {
-  cursor: pointer;
 }
 
 h3 {
@@ -17,6 +18,7 @@ h3 {
   font-family: Avenir-Heavy;
   font-size: 1.2em;
   margin: 0;
+  cursor: pointer;
 }
 
 span {
@@ -26,6 +28,14 @@ span {
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
   transition: transform 200ms ease-in-out;
+}
+
+#default {
+  display: none;
+}
+
+#default.visible {
+  display: flex;
 }
 
 #span-price.filter,
@@ -75,6 +85,7 @@ li:after {
 
   display: block;
   content: '';
+  box-sizing: 100px;
   border-bottom: solid 2px;
 
   transform: scaleX(0);
@@ -119,6 +130,10 @@ li:after {
 .product-page.open {
   display: flex;
   z-index: 1;
+}
+
+body.hidden {
+  overflow: hidden;
 }
 
 .container {
@@ -169,14 +184,14 @@ li:after {
   font-family: Avenir-Medium;
   color: #5c61da;
 
-  margin: 80px 0 0 0;
+  margin: 70px 0 0 0;
 }
 
 #show-name {
   font-size: 1.8em;
   font-family: Avenir-Medium;
 
-  margin: 40px 0 10px 0;
+  margin: 20px 0 10px 0;
 }
 
 #show-describe1,
@@ -189,7 +204,7 @@ li:after {
 
 .show-info {
   display: flex;
-  margin: 40px 0 30px 0;
+  margin: 40px 0 35px 0;
 }
 
 #show-price {

@@ -194,59 +194,37 @@
     </div>
 
     <!-- Products -->
-    <div>
-        <h1>Produits</h1>
-        <div class="products">
-
+    <section class="products">
+        <template id="product" >
             <div class="product">
-                <img id="product-image" src="/image/products/produit2.webp" alt="Produit">
+                <img id="product-image" src="" alt="Produit">
                 <div class="line-product">
-                    <p class="name">L'Oréal</p>
-                    <p class="price">24 €</p>
+                    <p id="brand-product"></p>
+                    <p id="price-product"></p>
                 </div>
-                <p class="info" id="describe1">Rénovateur de longueurs</p>
-                <p class="info" id="describe2">Pour cheveux longs</p>
+                <p class="describe" id="describe1"></p>
+                <p class="describe" id="describe2"></p>
             </div>
-
-            <div class="product">
-                <img id="product-image" src="/image/products/produit1.webp" alt="Produit">
-                <div class="line-product">
-                    <p class="name">L'Oréal</p>
-                    <p class="price">20 €</p>
-                </div>
-                <p class="info" id="describe1">Restructurant instantané</p>
-                <p class="info" id="describe2">Pour cheveux secs et abimés</p>
-            </div>
-
-            <div class="product">
-                <img id="product-image" src="/image/products/produit3.webp" alt="Produit">
-                <div class="line-product">
-                    <p id="brand-product">L'Oréal</p>
-                    <p id="price-product">27 €</p>
-                </div>
-                <p class="info" id="describe1">Neutralisateur anti-jaunissement</p>
-                <p class="info" id="describe2">Pour cheveux blonds ou méchés</p>
-            </div>
-        </div>
-        <div class="button-show-more">
-            <a id="show-more" href="products.html">Voir plus de produits</a>
-        </div>
+        </template>
+    </section>    
+    <div class="button-show-more">
+        <a id="show-more" href="products.html">Voir plus de produits</a>
     </div>
+    
 
     <!-- Avis -->
     <div>
         <h1>Avis</h1>
         <div class="block">
             <div class="avis">
-                <p id="name">JE stestezf</p>
+                <p id="name"></p>
                 <img id="star" src="/image/icon/star.svg">
                 <img src="/image/icon/star.svg">
                 <img src="/image/icon/star.svg">
                 <img src="/image/icon/star.svg">
                 <img src="/image/icon/star.svg">
             </div>
-            <p class="comment"> <span>“ </span><span> “</span>
-            </p>
+            <p class="comment"> <span>“ </span><span> “</span></p>
             
         </div>
         <div class="carousel">

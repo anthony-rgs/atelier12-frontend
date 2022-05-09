@@ -138,12 +138,12 @@ let commentList = [
   },
 ]
 
-function getRandomComment() {
+function getRandomNumbers(list) {
   const randomList = []
   for (let i = 1; i < 2; ) {
-    const randomComment = Math.floor(Math.random() * commentList.length)
-    if (randomList.includes(randomComment) == false) {
-      randomList.push(randomComment)
+    const random = Math.floor(Math.random() * list.length)
+    if (randomList.includes(random) == false) {
+      randomList.push(random)
     }
     if (randomList.length == 5) {
       return randomList
@@ -151,7 +151,7 @@ function getRandomComment() {
   }
 }
 
-const randomCommentList = getRandomComment()
+const randomCommentList = getRandomNumbers(commentList)
 
 function getComment(nb) {
   for (let i = 0; i < 5; i++) {
@@ -179,3 +179,39 @@ function timeout() {
 }
 
 timeout()
+
+// 3 firsts products from catalogue
+const baseUrl = 'http://localhost:1337'
+const template = document.querySelector('template#product')
+const products = document.querySelector('.products')
+
+fetch(`${baseUrl}/api/produits?populate=*`)
+  .then((res) => res.json())
+  .then((data) => {
+    const randomProductList = getRandomNumbers(data.data)
+    for (let i = 0; i < 3; i++) {
+      const clone = template.content.cloneNode(true)
+      const product = clone.querySelector('.product')
+      const img = clone.querySelector('#product-image')
+      const brand = clone.querySelector('#brand-product')
+      const price = clone.querySelector('#price-product')
+      const describe1 = clone.querySelector('#describe1')
+      const describe2 = clone.querySelector('#describe2')
+
+      product.classList.add(
+        data.data[randomProductList[i]].attributes.categorie,
+      )
+      img.src = `${
+        baseUrl +
+        data.data[randomProductList[i]].attributes.image.data[0].attributes.url
+      }`
+      brand.textContent = data.data[randomProductList[i]].attributes.marque
+      price.textContent = `${data.data[randomProductList[i]].attributes.prix} €`
+      describe1.textContent =
+        data.data[randomProductList[i]].attributes.descriptif1
+      describe2.textContent =
+        data.data[randomProductList[i]].attributes.descriptif2
+
+      products.appendChild(clone)
+    }
+  })

@@ -15,17 +15,12 @@
 
 @font-face {
   font-family: Avenir-Medium;
-  src: url(/fonts/Metropolis-Medium.otf);
+  src: url(/fonts/Avenir-Medium.ttf);
 }
 
 @font-face {
   font-family: Avenir-Heavy;
-  src: url(/fonts/Metropolis-SemiBold.otf);
-}
-
-@font-face {
-  font-family: Avenir-Black;
-  src: url(/fonts/Metropolis-SemiBold.otf);
+  src: url(/fonts/Avenir-Heavy.ttf);
 }
 
 body {
@@ -75,7 +70,7 @@ footer {
 
 #adress,
 #num {
-  font-family: Avenir-Black;
+  font-family: Avenir-Heavy;
   font-size: 18px;
   color: #5c61da;
   text-decoration: none;

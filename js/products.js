@@ -1,4 +1,4 @@
-// Open / Close filter
+// Open - Close filter
 const filterCategory = document.querySelector('#filter-category')
 const filterPrice = document.querySelector('#filter-price')
 const spanCategory = document.querySelector('#span-category')
@@ -30,20 +30,96 @@ filterPrice.addEventListener('click', () => {
   }
 })
 
+// Filters
+const shampoo = document.querySelector('#shampoo')
+const styling = document.querySelector('#styling')
+const care = document.querySelector('#care')
+const defaultFilters = document.querySelector('#default')
+const getProductElements = () => {
+  const productsShampoo = document.querySelectorAll('.product.Shampoing')
+  const productsStyling = document.querySelectorAll('.product.Coiffant')
+  const productsCare = document.querySelectorAll('.product.Soin')
+  return { productsShampoo, productsStyling, productsCare }
+}
+
 // Get products from strapi
 const baseUrl = 'http://localhost:1337'
 
 fetch(`${baseUrl}/api/produits?populate=*`)
   .then((res) => res.json())
   .then((data) => {
-    console.log(data)
     data.data.forEach((productData) => {
       const productElement = createProductElement(productData)
+
       // Show product selected
       productElement.addEventListener('click', () => {
         page.classList.add('open')
+        document.body.classList.add('hidden')
         productPage(productData)
       })
+
+      // Filters
+      const { productsShampoo, productsStyling, productsCare } =
+        getProductElements()
+
+      // Filter Shampoo
+      shampoo.addEventListener('click', () => {
+        defaultFilters.classList.add('visible')
+        productsShampoo.forEach((productShampoo) => {
+          productShampoo.style.display = 'block'
+        })
+        productsStyling.forEach((productStyling) => {
+          productStyling.style.display = 'none'
+        })
+        productsCare.forEach((productCare) => {
+          productCare.style.display = 'none'
+        })
+
+        shampoo.classList.add('click')
+      })
+
+      // Filter Styling
+      styling.addEventListener('click', () => {
+        defaultFilters.classList.add('visible')
+        productsStyling.forEach((productStyling) => {
+          productStyling.style.display = 'block'
+        })
+        productsShampoo.forEach((productShampoo) => {
+          productShampoo.style.display = 'none'
+        })
+        productsCare.forEach((productCare) => {
+          productCare.style.display = 'none'
+        })
+      })
+
+      // Filter Care
+      care.addEventListener('click', () => {
+        defaultFilters.classList.add('visible')
+        productsCare.forEach((productCare) => {
+          productCare.style.display = 'block'
+        })
+        productsShampoo.forEach((productShampoo) => {
+          productShampoo.style.display = 'none'
+        })
+        productsStyling.forEach((productStyling) => {
+          productStyling.style.display = 'none'
+        })
+      })
+
+      // Clear Filters
+      defaultFilters.addEventListener('click', () => {
+        defaultFilters.classList.remove('visible')
+        productsShampoo.forEach((productShampoo) => {
+          productShampoo.style.display = 'block'
+        })
+        productsStyling.forEach((productStyling) => {
+          productStyling.style.display = 'block'
+        })
+        productsCare.forEach((productCare) => {
+          productCare.style.display = 'block'
+        })
+      })
+      console.log(productData.attributes.categorie)
     })
   })
 
@@ -53,12 +129,14 @@ const products = document.querySelector('.products')
 
 function createProductElement(productData) {
   const clone = template.content.cloneNode(true)
+  const product = clone.querySelector('.product')
   const img = clone.querySelector('#product-image')
   const brand = clone.querySelector('#brand-product')
   const price = clone.querySelector('#price-product')
   const describe1 = clone.querySelector('#describe1')
   const describe2 = clone.querySelector('#describe2')
 
+  product.classList.add(productData.attributes.categorie)
   img.src = `${baseUrl + productData.attributes.image.data[0].attributes.url}`
   brand.textContent = productData.attributes.marque
   price.textContent = `${productData.attributes.prix} €`
@@ -88,14 +166,11 @@ function productPage(productData) {
   describe2.textContent = productData.attributes.descriptif2
 }
 
-// Open / Close product selected box
+// Open - Close product selected box
 const cross = document.querySelector('#cross')
 const page = document.querySelector('.product-page')
 
-function openProduct() {
-  page.classList.add('open')
-}
-
 cross.addEventListener('click', () => {
   page.classList.remove('open')
+  document.body.classList.remove('hidden')
 })
