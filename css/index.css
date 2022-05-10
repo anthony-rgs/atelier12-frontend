@@ -1,11 +1,41 @@
+.all-screen {
+  height: 100vh;
+  align-items: center;
+  position: relative;
+}
+
+.presentation {
+  display: flex;
+  justify-content: space-between;
+}
+
+.presentation-textes {
+  width: 340px;
+}
+
+.presentation-textes h1 {
+  margin-top: -5px;
+  margin-bottom: 50px;
+}
+
+.presentation-textes p {
+  font-family: Avenir-Roman;
+  font-size: 21px;
+  margin-bottom: 46px;
+  line-height: 31.5px;
+}
+
+.violet {
+  font-family: Avenir-Medium;
+  color: #5c61da;
+}
+
 .picture {
-  margin-top: 100px;
-  width: 100%;
+  width: 824px;
   height: 500px;
 }
 
 h1 {
-  padding: 100px 0 0 0;
   margin: 0;
   font-size: 34px;
   font-family: Avenir-Heavy;
@@ -168,7 +198,7 @@ h1 {
   height: 160px;
 }
 
-span {
+.apostrophe {
   font-family: Avenir-Roman;
   font-size: 24px;
 }

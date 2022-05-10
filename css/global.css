@@ -76,6 +76,11 @@ footer {
   text-decoration: none;
 }
 
+.product {
+  text-decoration: none;
+  color: black;
+}
+
 #brand-product {
   font-family: Avenir-Medium;
 }

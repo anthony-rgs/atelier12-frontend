@@ -166,7 +166,7 @@ function productPage(productData) {
   describe2.textContent = productData.attributes.descriptif2
 }
 
-// Open - Close product selected box
+// Close product selected box
 const cross = document.querySelector('#cross')
 const page = document.querySelector('.product-page')
 

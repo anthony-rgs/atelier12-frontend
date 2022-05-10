@@ -3,25 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/global.css" rel="stylesheet">
     <link href="/css/index.css" rel="stylesheet">
+    <link href="/image/favicon.png" rel="icon">
+
     <title>L'Atelier 12</title>
 </head>
 
 <body>
-    <!-- Header -->
-    <header id="header-index">
-        <img src="/image/atelier-logo.svg" alt="Logo Atelier">
-        <div id="bar-header"></div>
-    </header>
+    <section class="all-screen">
+        <!-- Header -->
+        <header id="header-index">
+            <img src="/image/atelier-logo.svg" alt="Logo Atelier">
+            <div id="bar-header"></div>
+        </header>
 
-    <!-- Section images -->
-    <img class="picture" src="/image/test.png" alt="Photo intérieur de l'Atelier">
+        <!-- Section presentation shop -->
+        <section class="presentation">
+            <div class="presentation-textes">
+                <h1>À propos</h1>
+                <p>Situé au cœur du <span class="violet">5ème arrondissement</span> et à deux pas du Jardin des plantes, le salon L’Atelier à vu le jour en février 2011.</p>
+                <p>Ici, un conseil et une prestation de coiffure de qualité pour tous types de cheveux, le tout dans une ambiance des plus <span class="violet">conviviales.</span></p>
+                <p>L’ Atelier travaille avec la gamme <span class="violet">L’Oréal</span> et <span class="violet">Sublimo</span>.</p>
+            </div>
+            <img class="picture" src="/image/tests.png" alt="Photo de l'Atelier">
+        </section>
+    </section>
 
     <!-- Prices -->
-    <div>
+    <section>
         <h1>Prix</h1>
         <div class="choices">
             <button class="active" id="women">Femme</button>
@@ -191,12 +202,12 @@
             </div>
             <p id="haircut-info">(Shampooing, Coupe, Permanente, Coiffage)</p>
         </div>
-    </div>
+    </section>
 
     <!-- Products -->
     <section class="products">
-        <template id="product" >
-            <div class="product">
+        <template id="product">
+            <a class="product" href="products.html">
                 <img id="product-image" src="" alt="Produit">
                 <div class="line-product">
                     <p id="brand-product"></p>
@@ -204,7 +215,7 @@
                 </div>
                 <p class="describe" id="describe1"></p>
                 <p class="describe" id="describe2"></p>
-            </div>
+            </a>
         </template>
     </section>    
     <div class="button-show-more">
@@ -213,7 +224,7 @@
     
 
     <!-- Avis -->
-    <div>
+    <section>
         <h1>Avis</h1>
         <div class="block">
             <div class="avis">
@@ -224,7 +235,7 @@
                 <img src="/image/icon/star.svg">
                 <img src="/image/icon/star.svg">
             </div>
-            <p class="comment"> <span>“ </span><span> “</span></p>
+            <p class="comment"> <span class="apostrophe">“ </span><span class="apostrophe"> “</span></p>
             
         </div>
         <div class="carousel">
@@ -235,10 +246,10 @@
             <button class="carousel-button" id="button-4" onclick="getComment(4)"></button>
         </div>
 
-    </div>
+    </section>
 
     <!-- Open -->
-    <div class="place">
+    <section class="place">
         <div class="hours">
             <h2>Horaires d'ouvertures</h2>
 
@@ -280,7 +291,7 @@
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2625.987815123511!2d2.3546398156395627!3d48.83937110999971!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671f24beb256d%3A0x61c4fe50e85514fc!2s12%20Rue%20Geoffroy-Saint-Hilaire%2C%2075005%20Paris!5e0!3m2!1sfr!2sfr!4v1649702513626!5m2!1sfr!2sfr"
             width="700" height="371" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+    </section>
 
     <!-- Footer -->
     <footer>
