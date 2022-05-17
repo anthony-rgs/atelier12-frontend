@@ -1,28 +1,44 @@
-.all-screen {
-  height: 100vh;
-  align-items: center;
-  position: relative;
+#header-index {
+  height: 10vh;
+}
+
+.landingpage {
+  display: flex;
+  flex-direction: column;
+  height: calc(100vh - 30px);
 }
 
 .presentation {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#presentation-container {
+  width: 100%;
   display: flex;
   justify-content: space-between;
 }
 
-.presentation-textes {
+.presentation-texts {
   width: 340px;
 }
 
-.presentation-textes h1 {
+.presentation-texts h1 {
   margin-top: -5px;
   margin-bottom: 50px;
 }
 
-.presentation-textes p {
+.presentation-texts p {
   font-family: Avenir-Roman;
   font-size: 21px;
   margin-bottom: 46px;
   line-height: 31.5px;
+}
+
+.presentation-texts p:last-child {
+  margin-bottom: 0;
 }
 
 .violet {
