@@ -176,15 +176,10 @@ h1 {
 }
 
 .products {
-  padding: 40px;
+  padding: 40px 80px 20px 80px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   flex-wrap: wrap;
-}
-
-.product {
-  padding-right: 30px;
-  margin: 0;
 }
 
 .product:last-child {
@@ -197,6 +192,42 @@ h1 {
   text-align: center;
   font-size: 1.25rem;
   margin-bottom: 5px;
+}
+
+@media screen and (max-width: 1050px) {
+  header img {
+    width: 21%;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  #men,
+  #women {
+    font-size: 1.5rem;
+  }
+  .presentation-texts p {
+    font-size: 90%;
+  }
+  .line p,
+  #haircut-info p {
+    font-size: 80%;
+  }
+  #women-price.visible,
+  #men-price.visible {
+    padding: 0 70px 0 70px;
+  }
+  .choices {
+    padding: 30px 70px 30px 70px;
+  }
+  .products {
+    padding: 30px 70px;
+  }
+  .line-product {
+    font-size: 1.15rem;
+  }
+  .product {
+    font-size: 97%;
+  }
 }
 
 #show-more {
@@ -273,43 +304,44 @@ h1 {
 }
 
 .place {
-  padding-top: 100px;
+  margin-top: 80px;
   display: flex;
 }
 
 .hours {
-  width: 460px;
-  height: 370px;
+  width: 40%;
+  height: 100%;
   margin-left: 0;
   margin-right: auto;
 }
 
 h2 {
   margin-top: 0;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: Avenir-Medium;
 }
 
 .line-hours {
   display: flex;
   justify-content: space-between;
-  height: 27px;
-  margin-bottom: 20px;
+  height: 1.688rem;
+  margin-bottom: 1.188rem;
 }
 
 .day {
   font-family: Avenir-Medium;
-  font-size: 18px;
+  font-size: 1.125rem;
 }
 
 .hour {
   font-family: Avenir-Light;
-  font-size: 18px;
+  font-size: 1.188rem;
 }
 
 iframe {
   margin-right: 0;
   margin-left: auto;
+  width: 50%;
 }
 
 /* @media screen and (max-width: 1360px) {

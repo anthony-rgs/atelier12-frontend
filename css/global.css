@@ -53,7 +53,7 @@ header img {
 }
 
 footer {
-  margin-top: 100px;
+  margin-top: 80px;
 }
 
 .informations {
@@ -107,15 +107,23 @@ footer {
 }
 
 .product {
-  width: 276px;
-  height: 278px;
+  width: 25%;
+  min-width: 27ch;
+  height: 100%;
   margin: auto;
+  padding-right: 30px;
+  margin: 0;
 
   cursor: pointer;
+}
+
+.image-container {
+  display: flex;
 }
 
 #product-image {
   width: 116px;
   height: 166px;
-  margin: 10px 80px 0 80px;
+  margin-top: 10px;
+  margin: auto;
 }
