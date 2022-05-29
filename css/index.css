@@ -21,12 +21,6 @@
   --text-width: 30%;
 }
 
-@media screen and (min-width: 1024px) {
-  #presentation-container {
-    --text-width: 35%;
-  }
-}
-
 .presentation-texts {
   margin-right: 2rem;
   width: var(--text-width, 30%);
@@ -147,6 +141,7 @@ h1 {
   display: flex;
   justify-content: space-between;
   text-align: center;
+
   font-size: 1.25rem;
 }
 
@@ -179,7 +174,6 @@ h1 {
   padding: 40px 80px 20px 80px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
 }
 
 .product:last-child {
@@ -192,42 +186,6 @@ h1 {
   text-align: center;
   font-size: 1.25rem;
   margin-bottom: 5px;
-}
-
-@media screen and (max-width: 1050px) {
-  header img {
-    width: 21%;
-  }
-  h1 {
-    font-size: 1.8rem;
-  }
-  #men,
-  #women {
-    font-size: 1.5rem;
-  }
-  .presentation-texts p {
-    font-size: 90%;
-  }
-  .line p,
-  #haircut-info p {
-    font-size: 80%;
-  }
-  #women-price.visible,
-  #men-price.visible {
-    padding: 0 70px 0 70px;
-  }
-  .choices {
-    padding: 30px 70px 30px 70px;
-  }
-  .products {
-    padding: 30px 70px;
-  }
-  .line-product {
-    font-size: 1.15rem;
-  }
-  .product {
-    font-size: 97%;
-  }
 }
 
 #show-more {
@@ -267,7 +225,7 @@ h1 {
   font-family: Avenir-Book;
   font-size: 1.125rem;
   line-height: 30px;
-  border: solid;
+  height: 115px;
 }
 
 .apostrophe {
@@ -297,10 +255,6 @@ h1 {
 
 .carousel-button.select {
   background-color: #5c61da;
-}
-
-.box-comment {
-  float: left;
 }
 
 .place {
@@ -344,250 +298,204 @@ iframe {
   width: 50%;
 }
 
-/* @media screen and (max-width: 1360px) {
-  .picture {
-    width: 724px;
-    height: 438px;
-  }
-
-  .presentation-texts h1 {
-    margin-bottom: 30px;
-  }
-
-  .presentation-texts p {
-    font-size: 1.2em;
-    margin-bottom: 40px;
-    line-height: 29px;
+@media screen and (max-width: 1297px) {
+  .comment {
+    height: 155px;
   }
 }
 
-@media screen and (max-width: 1260px) {
+@media screen and (max-width: 1050px) {
   header img {
-    width: 170px;
-  }
-
-  .picture {
-    width: 624px;
-    height: 378px;
+    width: 21%;
   }
 
   h1 {
-    font-size: 1.8em;
+    font-size: 1.8rem;
+  }
+
+  #men,
+  #women {
+    font-size: 1.5rem;
   }
 
   .presentation-texts p {
-    font-size: 1.1em;
-    margin-bottom: 35px;
-    line-height: 27px;
+    font-size: 90%;
+  }
+
+  .line p,
+  #haircut-info p {
+    font-size: 80%;
+  }
+
+  #women-price.visible,
+  #men-price.visible {
+    padding: 0 70px 0 70px;
+  }
+
+  .choices {
+    padding: 30px 70px 30px 70px;
+  }
+
+  .products {
+    padding: 30px 70px;
+  }
+
+  .line-product {
+    font-size: 1.15rem;
+  }
+
+  .product {
+    font-size: 97%;
+  }
+
+  .block {
+    margin: 40px 70px 30px 70px;
+  }
+
+  #presentation-container {
+    --text-width: 35%;
   }
 }
 
-@media screen and (max-width: 1160px) {
-  header img {
-    width: 150px;
-  }
-
-  #bar-header {
-    margin-top: 25px;
-  }
-
-  .picture {
-    width: 500px;
-    height: 300px;
-  }
-
-  h1 {
-    font-size: 1.6em;
-  }
-
-  .presentation-texts h1 {
-    margin-bottom: 25px;
-  }
-
-  .presentation-texts p {
-    font-size: 1em;
-    margin-bottom: 34px;
-    line-height: 22px;
+@media screen and (max-width: 1010px) {
+  .product {
+    padding-right: 0px;
   }
 }
 
-@media screen and (max-width: 1024px) {
-  header img {
-    width: 130px;
+@media screen and (max-width: 990px) {
+  .products {
+    font-size: 85%;
   }
-
-  #bar-header {
-    margin-top: 20px;
+  #product-image {
+    width: 88px;
+    height: 126px;
   }
+}
 
-  .picture {
-    width: 400px;
-    height: 240px;
-  }
-
-  h1 {
-    font-size: 1.4em;
-  }
-
-  .presentation-texts h1 {
-    margin-bottom: 20px;
-  }
-
-  .presentation-texts p {
-    font-size: 0.9em;
-    margin-bottom: 20px;
-    line-height: 19px;
-  }
-
-  .block,
-  .product,
-  #product-image,
-  iframe,
-  .hours {
-    width: 10px;
+@media screen and (max-width: 960px) {
+  .comment {
+    height: 170px;
   }
 }
 
 @media screen and (max-width: 900px) {
   body {
-    padding: 30px 50px 0 50px;
+    padding: 30px 60px 0 60px;
   }
 
-  .presentation {
-    margin-top: 0;
-  }
-}
-
-@media screen and (max-width: 812px) {
-  h1 {
-    font-size: 1.2em;
+  header img {
+    width: 23%;
   }
 
   .presentation-texts {
-    margin-right: 15px;
-    width: 240px;
+    margin-top: 10px;
+    margin-bottom: 10px;
   }
 
-  .presentation-texts p {
-    font-size: 0.8em;
-    margin-bottom: 18px;
-    line-height: 16px;
+  #presentation-container {
+    --text-width: 30%;
+  }
+
+  #women-price.visible,
+  #men-price.visible {
+    padding: 0 50px 0 50px;
+  }
+
+  .choices {
+    padding: 30px 50px 30px 50px;
+  }
+
+  .products {
+    padding: 30px 50px 10px 50px;
+  }
+
+  .block {
+    margin: 40px 50px 0 50px;
+  }
+
+  #haircut-info {
+    font-size: 85%;
+    margin-top: -10px;
+  }
+
+  #show-more {
+    font-size: 95%;
+  }
+
+  h2 {
+    font-size: 1.4rem;
   }
 }
 
-@media screen and (max-width: 722px) {
-  header img {
-    width: 120px;
-  }
-
-  .picture {
-    width: 350px;
-    height: 210px;
-  }
-
-  h1 {
-    font-size: 1.1em;
-  }
-
-  .presentation-texts h1 {
-    margin-bottom: 15px;
-  }
-
-  .presentation-texts p {
-    font-size: 0.8em;
-    margin-bottom: 16px;
-    line-height: 14px;
+@media screen and (max-width: 814px) {
+  .products {
+    font-size: 80%;
   }
 }
 
-@media screen and (max-width: 672px) {
+@media screen and (max-width: 767px) {
   body {
     padding: 20px 40px 0 40px;
   }
 
-  .landingpage {
-    height: calc(100vh - 15px);
+  .presentation {
+    margin-bottom: 0;
   }
 
-  .presentation-texts p {
-    margin-bottom: 15px;
-  }
-}
-
-@media screen and (max-width: 652px) {
-  .picture {
-    width: 300px;
-    height: 180px;
-  }
-
-  h1 {
-    font-size: 1em;
-  }
-
-  .presentation-texts {
-    margin-right: 10px;
-    width: 200px;
-  }
-
-  .presentation-texts p {
-    font-size: 0.7em;
-    margin-bottom: 12px;
-    line-height: 12px;
-  }
-}
-
-@media screen and (max-width: 571px) {
   header img {
-    width: 100px;
+    width: 25%;
   }
 
-  #bar-header {
-    margin-top: 15px;
+  #presentation-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
   }
 
-  .picture {
-    width: 300px;
-    height: 180px;
+  .presentation-texts {
+    width: 100%;
+    margin: 50px 0 50px 0;
+  }
+
+  .presentation-texts h1 {
+    margin: 0 0 20px 0;
   }
 
   h1 {
-    font-size: 0.9em;
-  }
-
-  .presentation-texts {
-    margin-right: 7px;
+    font-size: 1.6rem;
   }
 
   .presentation-texts p {
-    font-size: 0.6em;
-    margin-bottom: 15px;
-    line-height: 12px;
+    margin: 0 30px 15px 30px;
   }
-}
 
-@media screen and (max-width: 542px) {
   .picture {
-    width: 260px;
-    height: 157px;
+    content: url(/image/shop-mobile.webp);
   }
 
-  .presentation-texts {
-    margin-right: 15px;
+  #size-pic {
+    margin-top: -70px;
+    width: 100%;
+    position: relative;
+    left: 0;
   }
 
-  .presentation-texts p {
-    font-size: 0.5em;
-    margin-bottom: 18px;
-    line-height: 11px;
+  #women-price.visible,
+  #men-price.visible {
+    padding: 0 30px 0 30px;
+  }
+
+  #men,
+  #women {
+    font-size: 1.3rem;
+  }
+
+  .choices {
+    padding: 30px;
+  }
+
+  .products {
+    display: none;
   }
 }
-
-@media screen and (max-width: 517px) {
-  body {
-    padding: 20px 30px 0 30px;
-  }
-
-  .presentation-texts {
-    margin-right: 7px;
-  }
-} */
