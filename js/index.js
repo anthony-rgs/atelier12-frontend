@@ -97,12 +97,12 @@ let commentList = [
       "<span class='apostrophe'>“ </span>Sandra est une femme magnifique, dans son salon je suis toujours à l'aise. Elle discute avec le client et elle est très respectueuse. <br> Je la connais depuis presque dix ans et elle est toujours égale a elle même, je lui souhaite tout le bonheur et la réussite !<span class='apostrophe'> “</span>",
   },
   {
-    name: "Jean-Baptiste Colonna d'Istria",
+    name: 'Jean-Baptiste',
     commentary:
       "<span class='apostrophe'>“ </span>Super salon ! La patronne est vraiment très gentille et dotée d’un sens de l’humour impeccable. Très à l’écoute des souhaits de ses clients son coup de ciseaux est à chaque fois une réussite. <br> J’y passe toujours un très bon moment et j'y ressors toujours plus que satisfait. À recommander absolument !<span class='apostrophe'> “</span>",
   },
   {
-    name: 'Vincent André Jean Villemer',
+    name: 'Vincent Villemer',
     commentary:
       "<span class='apostrophe'>“ </span> La patronne est sympa, souriante malgré le masque et très professionnelle. Bien coiffé et paré pour les vacances au soleil ! <br> Allez-y sans inquiétude. <span class='apostrophe'> “</span>",
   },

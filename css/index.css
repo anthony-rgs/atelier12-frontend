@@ -389,8 +389,7 @@ iframe {
   }
 
   .presentation-texts {
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin: 10px 0;
   }
 
   #presentation-container {
@@ -455,7 +454,7 @@ iframe {
 
   .presentation-texts {
     width: 100%;
-    margin: 50px 0 50px 0;
+    margin: 30px 0 50px 0;
   }
 
   .presentation-texts h1 {
@@ -466,12 +465,20 @@ iframe {
     font-size: 1.6rem;
   }
 
+  .h1-space {
+    margin: 50px 0 20px;
+  }
+
   .presentation-texts p {
     margin: 0 30px 15px 30px;
   }
 
   .picture {
     content: url(/image/shop-mobile.webp);
+  }
+
+  .block {
+    margin: 0 30px;
   }
 
   #size-pic {
@@ -492,10 +499,113 @@ iframe {
   }
 
   .choices {
-    padding: 30px;
+    padding: 20px 0;
   }
 
   .products {
     display: none;
+  }
+
+  .comment {
+    height: 180px;
+    font-size: 98%;
+  }
+
+  #name {
+    font-size: 1.2rem;
+  }
+
+  .place {
+    margin-top: 50px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+
+  .day {
+    font-size: 1.05rem;
+  }
+
+  .hour {
+    font-size: 1.1rem;
+  }
+
+  iframe {
+    width: 55%;
+  }
+
+  #icon-footer {
+    padding-right: 10px;
+  }
+
+  #icon-footer {
+    width: 20px;
+  }
+
+  #adress,
+  #num {
+    font-size: 0.9rem;
+    margin-top: 3px;
+  }
+}
+
+@media screen and (max-width: 609px) {
+}
+
+@media screen and (max-width: 587px) {
+  #haircut-info {
+    font-size: 70%;
+    margin-top: -8px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  body {
+    padding: 20px 30px 0 30px;
+  }
+
+  .presentation {
+    margin-bottom: 0;
+  }
+
+  header img {
+    width: 30%;
+  }
+
+  #bar-header {
+    margin: 15px 0;
+  }
+
+  .presentation-texts {
+    margin: 15px 0 50px 0;
+  }
+
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  #men,
+  #women {
+    font-size: 1.25rem;
+  }
+
+  .line p {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header img {
+    width: 35%;
+  }
+
+  .presentation-texts p {
+    margin: 0 0 10px 0;
+  }
+
+  #women-price.visible,
+  #men-price.visible {
+    padding: 0;
   }
 }
