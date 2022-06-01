@@ -243,10 +243,14 @@ h1 {
   width: 12px;
   height: 12px;
   border: none;
-  border-radius: 50%;
+  border-radius: 100%;
   background-color: #b8b8b8;
   margin-right: 40px;
   cursor: pointer;
+}
+
+#button-4 {
+  margin-right: 0;
 }
 
 .carousel-button.classic {
@@ -278,8 +282,16 @@ h2 {
 .line-hours {
   display: flex;
   justify-content: space-between;
-  height: 1.688rem;
-  margin-bottom: 1.188rem;
+  margin-bottom: 22px;
+}
+
+.line-hours p {
+  margin: 0;
+}
+
+.line-hours:nth-child(8) {
+  margin-bottom: 0;
+  padding: 0;
 }
 
 .day {
@@ -454,7 +466,7 @@ iframe {
 
   .presentation-texts {
     width: 100%;
-    margin: 30px 0 50px 0;
+    margin: 30px 0 80px 0;
   }
 
   .presentation-texts h1 {
@@ -466,7 +478,7 @@ iframe {
   }
 
   .h1-space {
-    margin: 50px 0 20px;
+    margin: 80px 0 20px;
   }
 
   .presentation-texts p {
@@ -516,7 +528,7 @@ iframe {
   }
 
   .place {
-    margin-top: 50px;
+    margin-top: 80px;
   }
 
   h2 {
@@ -531,12 +543,16 @@ iframe {
     font-size: 1.1rem;
   }
 
+  .line-hours {
+    margin-bottom: 25px;
+  }
+
   iframe {
     width: 55%;
   }
 
   #icon-footer {
-    padding-right: 10px;
+    padding-right: 5px;
   }
 
   #icon-footer {
@@ -545,18 +561,56 @@ iframe {
 
   #adress,
   #num {
-    font-size: 0.9rem;
+    font-size: 0.8rem;
     margin-top: 3px;
+  }
+
+  #bar-footer {
+    margin-bottom: 30px;
+  }
+
+  footer {
+    margin-top: 80px;
+  }
+
+  .informations {
+    padding-bottom: 30px;
   }
 }
 
 @media screen and (max-width: 609px) {
+  .comment {
+    height: 205px;
+  }
+
+  .place {
+    display: grid;
+  }
+
+  .line-hours {
+    margin-bottom: 10px;
+  }
+  .hours {
+    width: 100%;
+  }
+
+  iframe {
+    margin-top: 20px;
+    height: 220px;
+    width: 100%;
+  }
 }
 
 @media screen and (max-width: 587px) {
   #haircut-info {
     font-size: 70%;
     margin-top: -8px;
+  }
+}
+
+@media screen and (max-width: 557px) {
+  .comment {
+    height: 230px;
   }
 }
 
@@ -578,7 +632,7 @@ iframe {
   }
 
   .presentation-texts {
-    margin: 15px 0 50px 0;
+    margin: 15px 0 80px 0;
   }
 
   h1 {
@@ -587,11 +641,25 @@ iframe {
 
   #men,
   #women {
-    font-size: 1.25rem;
+    font-size: 1.18rem;
   }
 
   .line p {
     font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .informations {
+    display: grid;
+  }
+
+  .adress {
+    margin-top: 5px;
+  }
+
+  #adress {
+    margin-top: 3px;
   }
 }
 
@@ -602,10 +670,55 @@ iframe {
 
   .presentation-texts p {
     margin: 0 0 10px 0;
+    line-height: 20px;
   }
 
   #women-price.visible,
   #men-price.visible {
     padding: 0;
+  }
+
+  .block {
+    margin: 0;
+  }
+
+  .comment {
+    font-size: 90%;
+  }
+
+  .apostrophe {
+    font-size: 1.4rem;
+  }
+
+  #name {
+    font-size: 1.1rem;
+  }
+
+  #star {
+    margin-left: 15px;
+  }
+}
+
+@media screen and (max-width: 444px) {
+  .comment {
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 380px) {
+  .comment {
+    font-size: 85%;
+  }
+}
+
+@media screen and (max-width: 379px) {
+  .line p {
+    font-size: 0.76rem;
+  }
+}
+
+@media screen and (max-width: 362px) {
+  .comment {
+    height: 295px;
   }
 }

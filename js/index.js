@@ -154,7 +154,6 @@ function getRandomNumbers(list) {
 const randomCommentList = getRandomNumbers(commentList)
 
 function getComment(nb) {
-  const randomCommentList = [19, 0, 10, 15, 17]
   for (let i = 0; i < 5; i++) {
     const carouselBtn = document.querySelector(`#button-${i}`)
     carouselBtn.classList.add('classic')
