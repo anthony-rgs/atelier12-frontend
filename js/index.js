@@ -39,7 +39,7 @@ let commentList = [
   {
     name: 'Catherine Poyet',
     commentary:
-      "<span class='apostrophe'>“ </span>Ce salon de coiffure tenu par Sandra est une excellente adresse : accueil super et compétence parfaite. Courez-y vous faire coiffer / couper les cheveux !<span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>Ce salon de coiffure tenu par Sandra est une excellente adresse : accueil super et compétence parfaite. <br> Courez-y vous faire coiffer / couper les cheveux !<span class='apostrophe'> “</span>",
   },
   {
     name: 'Romain Dufrene',
@@ -49,12 +49,12 @@ let commentList = [
   {
     name: 'Karine Recci',
     commentary:
-      "<span class='apostrophe'>“ </span>Je suis passée dernièrement pour faire des mèches, vraiment top ! Et la patronne Sandra est vraiment géniale, je recommande !!<span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>Je suis passée dernièrement pour faire des mèches, vraiment top ! Et la patronne Sandra est vraiment géniale. <br> Je recommande !!<span class='apostrophe'> “</span>",
   },
   {
     name: 'Julie Fraysse',
     commentary:
-      "<span class='apostrophe'>“ </span>Super salon que je recommande vivement ! Je remercie Sandra pour son écoute, sa bonne humeur et son professionnalisme ! <span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>Super salon que je recommande vivement ! <br> Je remercie Sandra pour son écoute, sa bonne humeur et son professionnalisme ! <span class='apostrophe'> “</span>",
   },
   {
     name: 'Sensitive shiatsu',
@@ -64,7 +64,7 @@ let commentList = [
   {
     name: 'Hélène Malaroda',
     commentary:
-      "<span class='apostrophe'>“ </span>Très professionnelle, à la fois à l'écoute de vos désirs mais aussi de bon conseil. Je recommande vivement ! <span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>Très professionnelle, à la fois à l'écoute de vos désirs mais aussi de bon conseil. <br> Je recommande vivement ! <span class='apostrophe'> “</span>",
   },
   {
     name: 'Martine Metayer',
@@ -79,7 +79,7 @@ let commentList = [
   {
     name: 'Olivier Le Marois',
     commentary:
-      "<span class='apostrophe'>“ </span>L'Atelier est mon salon de coiffure depuis 4 ans. Le résultat est toujours impeccable, parfaitement conforme à mes attentes, pour un prix plus que raisonnable. Et la patronne est charmante, ce qui ne gâche rien.<span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>L'Atelier est mon salon de coiffure depuis 4 ans. Le résultat est toujours impeccable, parfaitement conforme à mes attentes, pour un prix plus que raisonnable. <br> Et la patronne est charmante, ce qui ne gâche rien.<span class='apostrophe'> “</span>",
   },
   {
     name: 'Pierre Tchelitcheff',
@@ -89,7 +89,7 @@ let commentList = [
   {
     name: 'Mouza Clémence',
     commentary:
-      "<span class='apostrophe'>“ </span>SUPER !! <br> J'y vais depuis des années et pas question d'aller ailleurs. Sandra (la coiffeuse) est super sympa et comprend toujours très bien mes attentes. J'y ai d'ailleurs emmené plusieurs de mes amies qui ne vont plus que chez elle. <br> J'adore !<span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>SUPER !! <br> J'y vais depuis des années et pas question d'aller ailleurs. Sandra (la coiffeuse) est super sympa et comprend toujours très bien mes attentes. <br> J'y ai d'ailleurs emmené plusieurs de mes amies qui ne vont plus que chez elle. <br> J'adore !<span class='apostrophe'> “</span>",
   },
   {
     name: 'Ishak G',
@@ -114,7 +114,7 @@ let commentList = [
   {
     name: 'Théo',
     commentary:
-      "<span class='apostrophe'>“ </span> Sandra est charmante, très pro et toujours à l'heure. Le salon est cosy et il n'y a qu'une seule coiffeuse ce qui permet un suivi de qualité, y compris sur les cheveux compliqués. L'occasion de passer un bon moment sans avoir l'impression d'être pris pour du bétail. <span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span> Sandra est charmante, très pro et toujours à l'heure. Le salon est cosy et il n'y a qu'une seule coiffeuse ce qui permet un suivi de qualité, y compris sur les cheveux compliqués. <br> L'occasion de passer un bon moment sans avoir l'impression d'être pris pour du bétail. <span class='apostrophe'> “</span>",
   },
   {
     name: 'Charlie Verne',
@@ -129,7 +129,7 @@ let commentList = [
   {
     name: 'Margot Lambard',
     commentary:
-      "<span class='apostrophe'>“ </span>Très bonne expérience dans ce salon où je suis allée pour la première fois. La coiffeuse a su écouter mes demandes, me conseiller et me faire une coupe adaptée à ma nature de cheveux et envies. <br>Personne très professionnelle. Un salon dans lequel j’ai envie de retourner. <span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>Très bonne expérience dans ce salon où je suis allée pour la première fois. <br> La coiffeuse a su écouter mes demandes, me conseiller et me faire une coupe adaptée à ma nature de cheveux et envies. Personne très professionnelle. <br> Un salon dans lequel j’ai envie de retourner. <span class='apostrophe'> “</span>",
   },
   {
     name: 'BarbareSoy',
@@ -176,7 +176,7 @@ function timeout() {
     else num = 0
     getComment(num)
     timeout()
-  }, 100000)
+  }, 10000)
 }
 
 timeout()

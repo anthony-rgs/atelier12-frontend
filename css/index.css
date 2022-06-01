@@ -477,6 +477,11 @@ iframe {
     font-size: 1.6rem;
   }
 
+  #women:after,
+  #men:after {
+    margin-bottom: -2px;
+  }
+
   .h1-space {
     margin: 80px 0 20px;
   }
@@ -521,6 +526,10 @@ iframe {
   .comment {
     height: 180px;
     font-size: 98%;
+  }
+
+  .carousel {
+    margin: 0 -40px;
   }
 
   #name {
@@ -655,7 +664,7 @@ iframe {
   }
 
   .adress {
-    margin-top: 5px;
+    margin-top: 10px;
   }
 
   #adress {
