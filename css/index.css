@@ -242,12 +242,8 @@ h1 {
 .carousel-button {
   width: 12px;
   height: 12px;
-  max-width: 12px;
-  max-height: 12px;
-  min-width: 12px;
-  min-height: 12px;
 
-  border: none;
+  border: hidden;
   border-radius: 100%;
   background-color: #b8b8b8;
   margin-right: 40px;
