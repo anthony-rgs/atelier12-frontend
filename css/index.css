@@ -628,6 +628,10 @@ iframe {
     padding: 20px 30px 0 30px;
   }
 
+  .carousel {
+    margin: 0 -30px;
+  }
+
   .presentation {
     margin-bottom: 0;
   }
