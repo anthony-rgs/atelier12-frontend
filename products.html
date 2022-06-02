@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L'Atelier 12</title>
-    <link href="/css/products.css" rel="stylesheet">
     <link href="/css/global.css" rel="stylesheet">
+    <link href="/css/products.css" rel="stylesheet">
     <link href="/image/favicon.png" rel="icon">
 </head>
 
@@ -17,7 +17,7 @@
             <div class="show-product">
                 <img id="show-image"src="" alt="image du produit">
                 <div class="right-block">
-                    <p id="show-brand"></p>
+                    <p id="show-brand">L'Oréal</p>
                     <p id="show-name"></p>
                     <p id="show-describe1"></p>
                     <p id="show-describe2"></p>
@@ -49,14 +49,6 @@
                     <li id="care">Soins</li>
                 </ul>
             </div>
-    
-            <div class="menu"> 
-                <h3 id="filter-price">Prix<span id="span-price"></span></h3>
-                <ul  id="ul-price">
-                    <li>Prix le plus bas</li>
-                    <li>Prix le plus élevé</li>
-                </ul>
-            </div>
         </div>
         
         
@@ -69,7 +61,9 @@
     <section class="products">
         <template id="product" >
             <div class="product" onclick="productPage(this.id)">
-                <img id="product-image" src="" alt="Produit">
+                <div class="image-container">
+                    <img id="product-image" src="" alt="Produit">
+                </div>
                 <div class="line-product">
                     <p id="brand-product">L'Oréal</p>
                     <p id="price-product"></p>

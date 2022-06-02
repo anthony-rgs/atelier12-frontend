@@ -5,7 +5,7 @@ let productsList = [
     name: 'Absolut Repair',
     describe1: 'Restructurant instantané',
     describe2: 'Pour cheveux secs ou abimés',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-absolut-repair.webp',
   },
@@ -14,7 +14,7 @@ let productsList = [
     name: 'Blondifier Cool',
     describe1: 'Neutralisateur anti-jaunissement',
     describe2: 'Pour cheveux blonds ou méchés',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-blondifier-cool.webp',
   },
@@ -23,7 +23,7 @@ let productsList = [
     name: 'Instant Clear',
     describe1: 'Antipelliculaire purifiant',
     describe2: 'Pour tous types de cheveux',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-instant-clear.webp',
   },
@@ -32,7 +32,7 @@ let productsList = [
     name: 'Liss Unlimited',
     describe1: 'Lisseur intense',
     describe2: 'Pour cheveux indisciplinés',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-liss-unlimited.webp',
   },
@@ -41,7 +41,7 @@ let productsList = [
     name: 'Pro Longer',
     describe1: 'Rénovateur de longueurs',
     describe2: 'Pour cheveux longs',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-pro-longer.webp',
   },
@@ -50,7 +50,7 @@ let productsList = [
     name: 'Pure Resource',
     describe1: 'Purificateur',
     describe2: 'Pour cheveux gras',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-pure-resource.webp',
   },
@@ -59,7 +59,7 @@ let productsList = [
     name: 'Sensi Balance',
     describe1: 'Dermo protecteur apaisant',
     describe2: 'Pour cuir chevelu sensible',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-sensi-balance.webp',
   },
@@ -68,7 +68,7 @@ let productsList = [
     name: 'Silver',
     describe1: "Neutralisateur et raviveur d'éclat",
     describe2: 'Pour cheveux gris et blancs',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-silver-magnesium.webp',
   },
@@ -77,7 +77,7 @@ let productsList = [
     name: 'Vitamino Color',
     describe1: 'Fixateur de couleur',
     describe2: 'Pour cheveux colorés',
-    price: '16 €',
+    price: '16',
     quantity: '300ml',
     source: 'image/products/oreal-vitamino-color.webp',
   },
@@ -172,7 +172,7 @@ let productsList = [
     name: 'Aminexil Advanced',
     describe1: 'Anti-chute',
     describe2: '',
-    price: '48 €',
+    price: '48',
     quantity: '10x6ml',
     source: 'image/products/oreal-aminexil-advanced.webp',
   },
@@ -190,7 +190,7 @@ let productsList = [
     name: 'Absolut Repair',
     describe1: 'Masque restructurant instantané',
     describe2: 'Pour cheveux secs et abimés',
-    price: '28 €',
+    price: '28',
     quantity: '250ml',
     source: 'image/products/oreal-masque-absolut-repair.webp',
   },
@@ -199,7 +199,7 @@ let productsList = [
     name: 'Liss Unlimited',
     describe1: 'Masque lisseur intense',
     describe2: 'Pour cheveux indisciplinés',
-    price: '28 €',
+    price: '28',
     quantity: '250ml',
     source: 'image/products/oreal-masque-liss.webp',
   },
@@ -208,7 +208,7 @@ let productsList = [
     name: 'Pro longer',
     describe1: 'Masque rénovateur de longueurs',
     describe2: 'Pour cheveux longs',
-    price: '28 €',
+    price: '28',
     quantity: '250ml',
     source: 'image/products/oreal-masque-pro-longer.webp',
   },
@@ -217,7 +217,7 @@ let productsList = [
     name: 'Vitamino Color',
     describe1: 'Masque fixateur de couleur',
     describe2: 'Pour cheveux colorés',
-    price: '28 €',
+    price: '28',
     quantity: '250ml',
     source: 'image/products/oreal-masque-vitamino.webp',
   },
@@ -226,7 +226,7 @@ let productsList = [
     name: 'Mythic Oil',
     describe1: 'Huile nutritive',
     describe2: 'Pour tous types de cheveux',
-    price: '28 €',
+    price: '28',
     quantity: '',
     source: 'image/products/oreal-mythic-oil.webp',
   },
@@ -263,7 +263,7 @@ function createProductElement(randomProductList) {
     product.classList.add(productsList[randomProductList[i]].category)
     product.setAttribute('id', `${randomProductList[i]}`)
     img.src = productsList[randomProductList[i]].source
-    price.textContent = productsList[randomProductList[i]].price
+    price.textContent = `${productsList[randomProductList[i]].price} €`
     describe1.textContent = productsList[randomProductList[i]].describe1
     describe2.textContent = productsList[randomProductList[i]].describe2
     products.appendChild(clone)
@@ -288,7 +288,7 @@ function productPage(clickedId) {
   body.classList.add('hidden')
   img.src = productsList[clickedId].source
   nameProduct.textContent = productsList[clickedId].name
-  price.textContent = `${productsList[clickedId].price} -`
+  price.textContent = `${productsList[clickedId].price} € -`
   quantity.textContent = productsList[clickedId].quantity
   describe1.textContent = productsList[clickedId].describe1
   describe2.textContent = productsList[clickedId].describe2
@@ -305,11 +305,8 @@ cross.addEventListener('click', () => {
 
 // Filters
 const filterCategory = document.querySelector('#filter-category')
-const filterPrice = document.querySelector('#filter-price')
 const spanCategory = document.querySelector('#span-category')
-const spanPrice = document.querySelector('#span-price')
 const ulCategory = document.querySelector('#ul-category')
-const ulPrice = document.querySelector('#ul-price')
 
 const defaultFilters = document.querySelector('#default')
 const shampoo = document.querySelector('#shampoo')
@@ -319,10 +316,8 @@ const productsShampoo = document.querySelectorAll('.shampoo')
 const productsStyling = document.querySelectorAll('.styling')
 const productsCare = document.querySelectorAll('.care')
 
-// Open filters
+// Open - Close filters
 filterCategory.addEventListener('click', () => {
-  spanPrice.classList.remove('filter')
-  ulPrice.classList.remove('filter')
   if (spanCategory.classList.contains('filter')) {
     spanCategory.classList.remove('filter')
     ulCategory.classList.remove('filter')
@@ -332,20 +327,7 @@ filterCategory.addEventListener('click', () => {
   }
 })
 
-// Close filters
-filterPrice.addEventListener('click', () => {
-  spanCategory.classList.remove('filter')
-  ulCategory.classList.remove('filter')
-  if (spanPrice.classList.contains('filter')) {
-    spanPrice.classList.remove('filter')
-    ulPrice.classList.remove('filter')
-  } else {
-    spanPrice.classList.add('filter')
-    ulPrice.classList.add('filter')
-  }
-})
-
-//Filter Shampoo
+// Filter Shampoo
 shampoo.addEventListener('click', () => {
   defaultFilters.classList.add('visible')
   for (const productShampoo of productsShampoo) {
@@ -359,7 +341,7 @@ shampoo.addEventListener('click', () => {
   }
 })
 
-//Filter Styling
+// Filter Styling
 styling.addEventListener('click', () => {
   defaultFilters.classList.add('visible')
   for (const productStyling of productsStyling) {
@@ -373,7 +355,7 @@ styling.addEventListener('click', () => {
   }
 })
 
-//Filter Care
+// Filter Care
 care.addEventListener('click', () => {
   defaultFilters.classList.add('visible')
   for (const productCare of productsCare) {

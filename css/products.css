@@ -21,8 +21,7 @@ h3 {
   cursor: pointer;
 }
 
-#span-category,
-#span-price {
+#span-category {
   display: inline-block;
   margin-left: 30px;
   border-top: 10px solid black;
@@ -39,7 +38,6 @@ h3 {
   display: flex;
 }
 
-#span-price.filter,
 #span-category.filter {
   transform: rotate(90deg);
 }
@@ -53,8 +51,7 @@ ul {
   overflow: hidden;
 }
 
-#ul-category.filter,
-#ul-price.filter {
+#ul-category.filter {
   height: max-content;
   max-height: 100%;
   -webkit-transition: all 0.7s ease-in-out;
@@ -104,9 +101,14 @@ li:after {
 .products {
   padding: 0 50px 0 50px;
 
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 90px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+}
+
+.product {
+  padding: 0px;
 }
 
 .line-product {
