@@ -229,3 +229,15 @@ body.hidden {
 
   margin: 0;
 }
+
+.shampoo,
+.styling,
+.care {
+  display: block;
+}
+
+.shampoo.hidden,
+.styling.hidden,
+.care.hidden {
+  display: none;
+}

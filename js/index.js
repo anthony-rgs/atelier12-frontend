@@ -89,7 +89,7 @@ let commentList = [
   {
     name: 'Mouza Clémence',
     commentary:
-      "<span class='apostrophe'>“ </span>SUPER !! <br> J'y vais depuis des années et pas question d'aller ailleurs. Sandra (la coiffeuse) est super sympa et comprend toujours très bien mes attentes. <br> J'y ai d'ailleurs emmené plusieurs de mes amies qui ne vont plus que chez elle. <br> J'adore !<span class='apostrophe'> “</span>",
+      "<span class='apostrophe'>“ </span>SUPER !! <br> J'y vais depuis des années et pas question d'aller ailleurs. Sandra (la coiffeuse) est super sympa et comprend toujours très bien mes attentes. <br> J'y ai d'ailleurs emmené plusieurs de mes amies qui ne vont plus que chez elle. J'adore !<span class='apostrophe'> “</span>",
   },
   {
     name: 'Ishak G',
@@ -156,15 +156,14 @@ const randomCommentList = getRandomNumbers(commentList)
 function getComment(nb) {
   for (let i = 0; i < 5; i++) {
     const carouselBtn = document.querySelector(`#button-${i}`)
-    carouselBtn.classList.add('classic')
-    carouselBtn.classList.remove('select')
+    carouselBtn.src = 'image/icon/caroussel-circle.svg'
   }
-  document.querySelector('#name').textContent =
-    commentList[randomCommentList[nb]].name
-  document.querySelector('.comment').innerHTML =
-    commentList[randomCommentList[nb]].commentary
-  document.querySelector('.comment').classList.add('visible')
-  document.querySelector(`#button-${nb}`).classList.add('select')
+  const name = document.querySelector('#name')
+  const comment = document.querySelector('.comment')
+  const circleSelected = document.querySelector(`#button-${nb}`)
+  name.textContent = commentList[randomCommentList[nb]].name
+  comment.innerHTML = commentList[randomCommentList[nb]].commentary
+  circleSelected.src = 'image/icon/caroussel-circle-violet.svg'
   num = nb
 }
 

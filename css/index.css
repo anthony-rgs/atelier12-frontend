@@ -240,26 +240,12 @@ h1 {
 }
 
 .carousel-button {
-  width: 12px;
-  height: 12px;
-
-  border: hidden;
-  border-radius: 100%;
-  background-color: #b8b8b8;
   margin-right: 40px;
   cursor: pointer;
 }
 
 #button-4 {
   margin-right: 0;
-}
-
-.carousel-button.classic {
-  background-color: #b8b8b8;
-}
-
-.carousel-button.select {
-  background-color: #5c61da;
 }
 
 .place {
