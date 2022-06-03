@@ -85,47 +85,64 @@ let productsList = [
   // Styling
   {
     category: 'styling',
-    name: '4 Force MAT',
-    describe1: 'Pommade de modelage matrifiante',
+    name: 'MAT',
+    describe1: 'Cire de modelage matrifiante',
     describe2: '',
-    price: '',
+    price: '17',
     quantity: '80ml',
     source: 'image/products/oreal-4mat.webp',
   },
-
   {
     category: 'styling',
-    name: '5 Force CLAY',
-    describe1: '',
+    name: 'Poker Paste',
+    describe1: 'Cire compacte repositionnable',
+    describe2: 'Fixation Ultime',
+    price: '15',
+    quantity: '',
+    source: 'image/products/oreal-pokerpaste.webp',
+  },
+  {
+    category: 'styling',
+    name: 'CLAY',
+    describe1: 'Cire',
     describe2: '',
-    price: '',
+    price: '17',
     quantity: '',
     source: 'image/products/oreal-5clay.webp',
   },
   {
     category: 'styling',
+    name: 'WEB',
+    describe1: 'Pâte sculptante évolutive',
+    describe2: '',
+    price: '16',
+    quantity: '',
+    source: 'image/products/oreal-pate-sculptante.webp',
+  },
+  {
+    category: 'styling',
     name: 'Fix Max',
-    describe1: 'Gel sculpture',
-    describe2: 'Extra-fixation',
-    price: '',
+    describe1: 'Gel extra-fixation',
+    describe2: '',
+    price: '18',
     quantity: '',
     source: 'image/products/oreal-gel-fixmax.webp',
   },
   {
     category: 'styling',
     name: 'Infinium pure 6',
-    describe1: '',
-    describe2: '',
-    price: '',
+    describe1: 'Laque coiffante',
+    describe2: 'Pour tous types de cheveux',
+    price: '14',
     quantity: '',
     source: 'image/products/oreal-laque.webp',
   },
   {
     category: 'styling',
     name: 'Volume Lift',
-    describe1: 'Spray-mousse',
+    describe1: 'Mousse',
     describe2: 'Volume racines',
-    price: '',
+    price: '18',
     quantity: '',
     source: 'image/products/oreal-mousse-volume-lift.webp',
   },
@@ -134,34 +151,16 @@ let productsList = [
     name: 'Full Volume Extra',
     describe1: 'Mousse volume',
     describe2: 'Fixation extra forte',
-    price: '',
+    price: '18',
     quantity: '',
     source: 'image/products/oreal-mousse.webp',
-  },
-  {
-    category: 'styling',
-    name: 'WEB',
-    describe1: 'Pâte sculptante évolutive',
-    describe2: '',
-    price: '',
-    quantity: '',
-    source: 'image/products/oreal-pate-sculptante.webp',
-  },
-  {
-    category: 'styling',
-    name: '7 Poker Paste',
-    describe1: 'Pâte compacte repositionnable',
-    describe2: 'Fixation Ultime',
-    price: '',
-    quantity: '',
-    source: 'image/products/oreal-pokerpaste.webp',
   },
   {
     category: 'styling',
     name: 'Fix Design',
     describe1: 'Spray fixation localisée',
     describe2: '',
-    price: '',
+    price: '18',
     quantity: '',
     source: 'image/products/oreal-spray-fixation.webp',
   },
@@ -171,19 +170,10 @@ let productsList = [
     category: 'care',
     name: 'Aminexil Advanced',
     describe1: 'Anti-chute',
-    describe2: '',
+    describe2: 'Pour tous types de cheveux',
     price: '48',
     quantity: '10x6ml',
     source: 'image/products/oreal-aminexil-advanced.webp',
-  },
-  {
-    category: 'care',
-    name: 'Solar Sublime',
-    describe1: 'Soin-spray invisible protecteur',
-    describe2: '',
-    price: '',
-    quantity: '125ml',
-    source: 'image/products/oreal-creme-protectrice.webp',
   },
   {
     category: 'care',
@@ -227,7 +217,7 @@ let productsList = [
     describe1: 'Huile nutritive',
     describe2: 'Pour tous types de cheveux',
     price: '28',
-    quantity: '',
+    quantity: '100ml',
     source: 'image/products/oreal-mythic-oil.webp',
   },
 ]
@@ -271,114 +261,3 @@ function createProductElement(randomProductList) {
 }
 
 createProductElement(randomProductList)
-
-// Create product for the product selected box
-function productPage(clickedId) {
-  const productPage = document.querySelector('.product-page')
-  const body = document.body
-
-  const img = document.querySelector('#show-image')
-  const nameProduct = document.querySelector('#show-name')
-  const price = document.querySelector('#show-price')
-  const quantity = document.querySelector('#show-quantity')
-  const describe1 = document.querySelector('#show-describe1')
-  const describe2 = document.querySelector('#show-describe2')
-
-  productPage.classList.add('open')
-  body.classList.add('hidden')
-  img.src = productsList[clickedId].source
-  nameProduct.textContent = productsList[clickedId].name
-  price.textContent = `${productsList[clickedId].price} € -`
-  quantity.textContent = productsList[clickedId].quantity
-  describe1.textContent = productsList[clickedId].describe1
-  describe2.textContent = productsList[clickedId].describe2
-}
-
-// Close product selected box
-const cross = document.querySelector('#cross')
-const page = document.querySelector('.product-page')
-
-cross.addEventListener('click', () => {
-  page.classList.remove('open')
-  document.body.classList.remove('hidden')
-})
-
-// Filters
-const filterCategory = document.querySelector('#filter-category')
-const spanCategory = document.querySelector('#span-category')
-const ulCategory = document.querySelector('#ul-category')
-
-const defaultFilters = document.querySelector('#default')
-const shampoo = document.querySelector('#shampoo')
-const styling = document.querySelector('#styling')
-const care = document.querySelector('#care')
-const productsShampoo = document.querySelectorAll('.shampoo')
-const productsStyling = document.querySelectorAll('.styling')
-const productsCare = document.querySelectorAll('.care')
-
-// Open - Close filters
-filterCategory.addEventListener('click', () => {
-  if (spanCategory.classList.contains('filter')) {
-    spanCategory.classList.remove('filter')
-    ulCategory.classList.remove('filter')
-  } else {
-    spanCategory.classList.add('filter')
-    ulCategory.classList.add('filter')
-  }
-})
-
-// Filter Shampoo
-shampoo.addEventListener('click', () => {
-  defaultFilters.classList.add('visible')
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.remove('hidden')
-  }
-  for (const productStyling of productsStyling) {
-    productStyling.classList.add('hidden')
-  }
-  for (const productCare of productsCare) {
-    productCare.classList.add('hidden')
-  }
-})
-
-// Filter Styling
-styling.addEventListener('click', () => {
-  defaultFilters.classList.add('visible')
-  for (const productStyling of productsStyling) {
-    productStyling.classList.remove('hidden')
-  }
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.add('hidden')
-  }
-  for (const productCare of productsCare) {
-    productCare.classList.add('hidden')
-  }
-})
-
-// Filter Care
-care.addEventListener('click', () => {
-  defaultFilters.classList.add('visible')
-  for (const productCare of productsCare) {
-    productCare.classList.remove('hidden')
-  }
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.add('hidden')
-  }
-  for (const productStyling of productsStyling) {
-    productStyling.classList.add('hidden')
-  }
-})
-
-// Clear Filters
-defaultFilters.addEventListener('click', () => {
-  defaultFilters.classList.remove('visible')
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.remove('hidden')
-  }
-  for (const productStyling of productsStyling) {
-    productStyling.classList.remove('hidden')
-  }
-  for (const productCare of productsCare) {
-    productCare.classList.remove('hidden')
-  }
-})

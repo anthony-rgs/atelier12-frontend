@@ -176,7 +176,16 @@ h1 {
   justify-content: space-between;
 }
 
-.product:last-child {
+.product {
+  display: none;
+  padding-right: 20px;
+}
+
+.product:nth-child(-n + 4) {
+  display: block;
+}
+
+.product:nth-child(4n) {
   padding-right: 0px;
 }
 
@@ -298,6 +307,20 @@ iframe {
   }
 }
 
+@media screen and (max-width: 1100px) {
+  .line-product {
+    font-size: 1.1rem;
+  }
+
+  .products {
+    font-size: 85%;
+  }
+  #product-image {
+    width: 88px;
+    height: 126px;
+  }
+}
+
 @media screen and (max-width: 1050px) {
   h1 {
     font-size: 1.8rem;
@@ -330,14 +353,6 @@ iframe {
     padding: 30px 70px;
   }
 
-  .line-product {
-    font-size: 1.15rem;
-  }
-
-  .product {
-    font-size: 97%;
-  }
-
   .block {
     margin: 40px 70px 30px 70px;
   }
@@ -347,19 +362,13 @@ iframe {
   }
 }
 
-@media screen and (max-width: 1010px) {
-  .product {
-    padding-right: 0px;
+@media screen and (max-width: 1000px) {
+  .line-product {
+    font-size: 1rem;
   }
-}
 
-@media screen and (max-width: 990px) {
   .products {
-    font-size: 85%;
-  }
-  #product-image {
-    width: 88px;
-    height: 126px;
+    font-size: 75%;
   }
 }
 
@@ -409,9 +418,22 @@ iframe {
   }
 }
 
-@media screen and (max-width: 814px) {
+@media screen and (max-width: 800px) {
   .products {
-    font-size: 80%;
+    justify-content: space-evenly;
+  }
+
+  #product-image {
+    width: 81px;
+    height: 116px;
+  }
+
+  .product:nth-child(4n) {
+    display: none;
+  }
+
+  .product:nth-child(3n) {
+    padding-right: 0;
   }
 }
 
@@ -482,7 +504,7 @@ iframe {
   }
 
   .products {
-    display: none;
+    padding: 0 30px 10px;
   }
 
   .comment {
@@ -544,6 +566,11 @@ iframe {
     height: 220px;
     width: 100%;
   }
+
+  #brand-product,
+  #price-product {
+    margin-bottom: 10px;
+  }
 }
 
 @media screen and (max-width: 587px) {
@@ -586,6 +613,16 @@ iframe {
   }
 }
 
+@media screen and (max-width: 500px) {
+  .line-product {
+    font-size: 0.9rem;
+  }
+
+  .products {
+    font-size: 70%;
+  }
+}
+
 @media screen and (max-width: 470px) {
   .presentation-texts p {
     margin: 0 0 10px 0;
@@ -612,11 +649,38 @@ iframe {
   #star {
     margin-left: 15px;
   }
+
+  .products {
+    padding: 0 0 10px;
+  }
 }
 
 @media screen and (max-width: 444px) {
   .comment {
     height: 240px;
+  }
+
+  #describe1 {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 415px) {
+  #describe1 {
+    margin-bottom: 10px;
+  }
+
+  #product-image {
+    height: 96px;
+    width: 67px;
+  }
+
+  .product {
+    font-size: 85%;
+  }
+
+  #show-more {
+    font-size: 0.8rem;
   }
 }
 
@@ -635,5 +699,9 @@ iframe {
 @media screen and (max-width: 362px) {
   .comment {
     height: 295px;
+  }
+
+  .product {
+    font-size: 72%;
   }
 }
