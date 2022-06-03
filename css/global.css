@@ -128,3 +128,89 @@ footer {
   margin-top: 10px;
   margin: auto;
 }
+
+@media screen and (max-width: 1050px) {
+  header img {
+    width: 21%;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  body {
+    padding: 30px 60px 0 60px;
+  }
+
+  header img {
+    width: 23%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  body {
+    padding: 20px 40px 0 40px;
+  }
+
+  header img {
+    width: 25%;
+  }
+
+  #icon-footer {
+    padding-right: 5px;
+  }
+
+  #icon-footer {
+    width: 20px;
+  }
+
+  #adress,
+  #num {
+    font-size: 0.8rem;
+    margin-top: 3px;
+  }
+
+  #bar-footer {
+    margin-bottom: 30px;
+  }
+
+  footer {
+    margin-top: 80px;
+  }
+
+  .informations {
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 530px) {
+  body {
+    padding: 20px 30px 0 30px;
+  }
+
+  header img {
+    width: 30%;
+  }
+
+  #bar-header {
+    margin: 15px 0;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .informations {
+    display: grid;
+  }
+
+  .adress {
+    margin-top: 10px;
+  }
+
+  #adress {
+    margin-top: 3px;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  header img {
+    width: 35%;
+  }
+}

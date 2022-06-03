@@ -1,15 +1,11 @@
 .filters {
-  padding: 50px 0 100px 0;
+  padding: 30px 0 80px 0;
   display: flex;
   justify-content: space-between;
 }
 
 .classics-menus {
   display: flex;
-}
-
-.menu {
-  margin-right: 100px;
 }
 
 h3 {
@@ -49,6 +45,7 @@ ul {
   position: absolute;
 
   overflow: hidden;
+  background-color: white;
 }
 
 #ul-category.filter {
@@ -104,7 +101,7 @@ li:after {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 60px;
+  gap: 60px 40px;
 }
 
 .product {
@@ -116,6 +113,7 @@ li:after {
   justify-content: space-between;
   text-align: center;
   font-size: 20px;
+
   margin-bottom: 5px;
 }
 
@@ -242,4 +240,108 @@ body.hidden {
 .styling.hidden,
 .care.hidden {
   display: none;
+}
+
+@media screen and (max-width: 1080px) {
+  .products {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .products {
+    gap: 40px 30px;
+  }
+
+  .product {
+    font-size: 80%;
+  }
+
+  #product-image {
+    height: 146px;
+    width: 103px;
+  }
+
+  #brand-product,
+  #price-product {
+    margin-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 716px) {
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  li {
+    font-size: 85%;
+  }
+
+  .product {
+    font-size: 70%;
+  }
+
+  #product-image {
+    height: 116px;
+    width: 81px;
+  }
+
+  #brand-product,
+  #price-product {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 644px) {
+  .products {
+    justify-content: space-evenly;
+  }
+}
+
+@media screen and (max-width: 428px) {
+  .filters {
+    padding-bottom: 60px;
+  }
+
+  h3 {
+    font-size: 0.95rem;
+  }
+
+  #span-category {
+    margin-left: 10px;
+    border-top: 8px solid black;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+  }
+
+  .product {
+    font-size: 57%;
+  }
+
+  #product-image {
+    height: 96px;
+    width: 67px;
+  }
+
+  #describe1 {
+    margin-bottom: 10px;
+  }
+
+  .products {
+    gap: 30px 20px;
+  }
+}
+
+@media screen and (max-width: 354px) {
+  body {
+    padding: 20px 15px 0;
+  }
+
+  #describe1 {
+    margin-bottom: 10px;
+  }
+
+  .products {
+    gap: 30px 15px;
+  }
 }
