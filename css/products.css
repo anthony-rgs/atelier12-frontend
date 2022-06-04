@@ -165,10 +165,12 @@ body.hidden {
   background-color: transparent;
   cursor: pointer;
   background-image: url('/image/icon/cross.svg');
+  background-repeat: no-repeat;
 }
 
 #cross:hover {
-  background-image: url('/image/icon/cross-violet.svg');
+  background-image: url('/image/icon/cross-violet.svg') no-repeat;
+  background-repeat: no-repeat;
 }
 
 .show-product img {

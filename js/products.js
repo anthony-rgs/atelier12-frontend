@@ -87,7 +87,7 @@ let productsList = [
     category: 'styling',
     name: 'MAT',
     describe1: 'Cire de modelage matrifiante',
-    describe2: '',
+    describe2: 'Pour tous types de cheveux',
     price: '17',
     quantity: '80ml',
     source: 'image/products/oreal-4mat.webp',
@@ -96,36 +96,36 @@ let productsList = [
     category: 'styling',
     name: 'Poker Paste',
     describe1: 'Cire compacte repositionnable',
-    describe2: 'Fixation Ultime',
+    describe2: 'Pour tous types de cheveux',
     price: '15',
-    quantity: '',
+    quantity: '75ml',
     source: 'image/products/oreal-pokerpaste.webp',
   },
   {
     category: 'styling',
     name: 'CLAY',
-    describe1: 'Cire',
-    describe2: '',
+    describe1: 'Cire fixation forte',
+    describe2: 'Pour tous types de cheveux',
     price: '17',
-    quantity: '',
+    quantity: '50ml',
     source: 'image/products/oreal-5clay.webp',
   },
   {
     category: 'styling',
     name: 'WEB',
     describe1: 'Pâte sculptante évolutive',
-    describe2: '',
+    describe2: 'Pour tous types de cheveux',
     price: '16',
-    quantity: '',
+    quantity: '150ml',
     source: 'image/products/oreal-pate-sculptante.webp',
   },
   {
     category: 'styling',
     name: 'Fix Max',
     describe1: 'Gel extra-fixation',
-    describe2: '',
+    describe2: 'Pour tous types de cheveux',
     price: '18',
-    quantity: '',
+    quantity: '200ml',
     source: 'image/products/oreal-gel-fixmax.webp',
   },
   {
@@ -134,34 +134,34 @@ let productsList = [
     describe1: 'Laque coiffante',
     describe2: 'Pour tous types de cheveux',
     price: '14',
-    quantity: '',
+    quantity: '500ml',
     source: 'image/products/oreal-laque.webp',
   },
   {
     category: 'styling',
     name: 'Volume Lift',
-    describe1: 'Mousse',
-    describe2: 'Volume racines',
+    describe1: 'Mousse volume racines',
+    describe2: 'Pour tous types de cheveux',
     price: '18',
-    quantity: '',
+    quantity: '250ml',
     source: 'image/products/oreal-mousse-volume-lift.webp',
   },
   {
     category: 'styling',
     name: 'Full Volume Extra',
-    describe1: 'Mousse volume',
-    describe2: 'Fixation extra forte',
+    describe1: 'Mousse fixation extra forte',
+    describe2: 'Pour tous types de cheveux',
     price: '18',
-    quantity: '',
+    quantity: '250ml',
     source: 'image/products/oreal-mousse.webp',
   },
   {
     category: 'styling',
     name: 'Fix Design',
     describe1: 'Spray fixation localisée',
-    describe2: '',
+    describe2: 'Pour tous types de cheveux',
     price: '18',
-    quantity: '',
+    quantity: '200ml',
     source: 'image/products/oreal-spray-fixation.webp',
   },
 
@@ -283,92 +283,3 @@ function productPage(clickedId) {
   describe1.textContent = productsList[clickedId].describe1
   describe2.textContent = productsList[clickedId].describe2
 }
-
-// Close product selected box
-const cross = document.querySelector('#cross')
-const page = document.querySelector('.product-page')
-
-cross.addEventListener('click', () => {
-  page.classList.remove('open')
-  document.body.classList.remove('hidden')
-})
-
-// Filters
-const filterCategory = document.querySelector('#filter-category')
-const spanCategory = document.querySelector('#span-category')
-const ulCategory = document.querySelector('#ul-category')
-
-const defaultFilters = document.querySelector('#default')
-const shampoo = document.querySelector('#shampoo')
-const styling = document.querySelector('#styling')
-const care = document.querySelector('#care')
-const productsShampoo = document.querySelectorAll('.shampoo')
-const productsStyling = document.querySelectorAll('.styling')
-const productsCare = document.querySelectorAll('.care')
-
-// Open - Close filters
-filterCategory.addEventListener('click', () => {
-  if (spanCategory.classList.contains('filter')) {
-    spanCategory.classList.remove('filter')
-    ulCategory.classList.remove('filter')
-  } else {
-    spanCategory.classList.add('filter')
-    ulCategory.classList.add('filter')
-  }
-})
-
-// Filter Shampoo
-shampoo.addEventListener('click', () => {
-  defaultFilters.classList.add('visible')
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.remove('hidden')
-  }
-  for (const productStyling of productsStyling) {
-    productStyling.classList.add('hidden')
-  }
-  for (const productCare of productsCare) {
-    productCare.classList.add('hidden')
-  }
-})
-
-// Filter Styling
-styling.addEventListener('click', () => {
-  defaultFilters.classList.add('visible')
-  for (const productStyling of productsStyling) {
-    productStyling.classList.remove('hidden')
-  }
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.add('hidden')
-  }
-  for (const productCare of productsCare) {
-    productCare.classList.add('hidden')
-  }
-})
-
-// Filter Care
-care.addEventListener('click', () => {
-  defaultFilters.classList.add('visible')
-  for (const productCare of productsCare) {
-    productCare.classList.remove('hidden')
-  }
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.add('hidden')
-  }
-  for (const productStyling of productsStyling) {
-    productStyling.classList.add('hidden')
-  }
-})
-
-// Clear Filters
-defaultFilters.addEventListener('click', () => {
-  defaultFilters.classList.remove('visible')
-  for (const productShampoo of productsShampoo) {
-    productShampoo.classList.remove('hidden')
-  }
-  for (const productStyling of productsStyling) {
-    productStyling.classList.remove('hidden')
-  }
-  for (const productCare of productsCare) {
-    productCare.classList.remove('hidden')
-  }
-})
