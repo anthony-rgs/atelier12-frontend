@@ -463,7 +463,7 @@ iframe {
 
   #women:after,
   #men:after {
-    margin-bottom: -2px;
+    border-bottom: solid 0;
   }
 
   .h1-space {
