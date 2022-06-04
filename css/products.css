@@ -420,8 +420,8 @@ body.hidden {
     margin: 0 20px 30px;
   }
 
-  .show-product:last-child {
-    font-size: 90%;
+  #buy {
+    font-size: 0.5rem;
   }
 
   #show-quantity {
