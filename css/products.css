@@ -420,11 +420,6 @@ body.hidden {
     margin: 0 20px 30px;
   }
 
-  #buy {
-    font-size: 0.5rem;
-    color: red;
-  }
-
   #show-quantity {
     margin: 1px 0 0 4px;
   }
