@@ -391,7 +391,7 @@ body.hidden {
   }
 
   .product {
-    font-size: 55%;
+    font-size: 52%;
   }
 
   #product-image {
@@ -417,15 +417,15 @@ body.hidden {
   }
 
   .show-product {
-    margin: 0 30px 30px;
+    margin: 0 20px 20px;
   }
 
   #show-quantity {
-    margin: 2px 0 0 4px;
+    margin: 1px 0 0 4px;
   }
 }
 
-@media screen and (max-width: 372px) {
+@media screen and (max-width: 352px) {
   .product-page {
     font-size: 45%;
   }
