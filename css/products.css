@@ -422,6 +422,7 @@ body.hidden {
 
   #buy {
     font-size: 0.5rem;
+    color: red;
   }
 
   #show-quantity {
