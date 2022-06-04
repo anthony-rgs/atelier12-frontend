@@ -417,7 +417,11 @@ body.hidden {
   }
 
   .show-product {
-    margin: 0 20px 20px;
+    margin: 0 30px 30px;
+  }
+
+  .show-product:last-child {
+    font-size: 90%;
   }
 
   #show-quantity {
@@ -425,7 +429,7 @@ body.hidden {
   }
 }
 
-@media screen and (max-width: 352px) {
+@media screen and (max-width: 372px) {
   .product-page {
     font-size: 45%;
   }
