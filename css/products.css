@@ -391,7 +391,7 @@ body.hidden {
   }
 
   .product {
-    font-size: 57%;
+    font-size: 55%;
   }
 
   #product-image {
@@ -440,7 +440,7 @@ body.hidden {
   }
 
   #show-quantity {
-    margin: 1px 0 0 3px;
+    margin: 2px 0 0 3px;
   }
 
   #cross {
