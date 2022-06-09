@@ -301,6 +301,12 @@ iframe {
   width: 50%;
 }
 
+@media screen and (min-width: 1470px) {
+  #presentation-container {
+    --text-width: 40%;
+  }
+}
+
 @media screen and (max-width: 1297px) {
   .comment {
     height: 155px;
