@@ -136,6 +136,11 @@ let commentList = [
     commentary:
       "Coiffeuse très pro et accueillante, elle saura vous donner des conseils judicieux tout en brisant la glace. <br> Coupe impec', horaire de rdv respecté, pour une première visite je ne suis pas du tout déçu, encore merci !",
   },
+  {
+    name: 'Nicolas Bergeron',
+    commentary:
+      "Première expérience, un moment très agréable ! Merci à la personne qui s'est occupée de moi, le résultat est très satisfaisant ! <br> J'y retournerai et je recommande vivement.",
+  },
 ]
 
 function getRandomNumbers(list) {
