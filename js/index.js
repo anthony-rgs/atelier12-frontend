@@ -141,6 +141,16 @@ let commentList = [
     commentary:
       "Première expérience, un moment très agréable ! Merci à la personne qui s'est occupée de moi, le résultat est très satisfaisant ! <br> J'y retournerai et je recommande vivement.",
   },
+  {
+    name: 'Guillaume Peignon',
+    commentary:
+      'Des coupes parfaites et des bonbons pour les enfants. Bref, on sort avec le sourire !',
+  },
+  {
+    name: 'Patrice Bensimon',
+    commentary:
+      "Salon à la propreté irréprochable. Je suis coiffé par sa propriétaire depuis plus de 15 ans et j'y vais les yeux fermés. <br> La coupe correspond toujours à mes attentes, dans la bonne humeur et la bienveillance.",
+  },
 ]
 
 function getRandomNumbers(list) {
