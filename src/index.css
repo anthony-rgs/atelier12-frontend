@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+/* Two-part type system:
+   - Georgia Pro (self-hosted, files supplied in public/fonts) — italic serif for every
+     title, the editorial, elegant statement voice.
+   - Geist Mono, uppercase for labels / normal case for reading text — the precise,
+     technical voice used everywhere else (paragraphs, prices, reviews, nav, buttons). */
+@import '@fontsource-variable/geist-mono';
+
+@font-face {
+  font-family: 'Georgia Pro';
+  src: url('/fonts/GeorgiaPro-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia Pro';
+  src: url('/fonts/GeorgiaPro-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia Pro';
+  src: url('/fonts/GeorgiaPro-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia Pro';
+  src: url('/fonts/GeorgiaPro-Italic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia Pro';
+  src: url('/fonts/GeorgiaPro-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Georgia Pro';
+  src: url('/fonts/GeorgiaPro-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+@theme {
+  /* Mostly monochrome, plus one confident, cohesive accent — a deep indigo-violet in the
+     spirit of the salon's original brand color, refined and used with intent rather than
+     scattered everywhere. */
+  --color-ink: #0a0a0a;
+  --color-ink-soft: #55555a;
+  --color-line: #e2e0dd;
+  --color-paper: #ffffff;
+  --color-primary: #4338ca;
+
+  --font-display: 'Georgia Pro', ui-serif, Georgia, serif;
+  /* `--font-sans` is aliased to the same mono stack on purpose: every existing `font-sans`
+     class in the app (body copy, prices, reviews…) becomes mono too, without touching each
+     component individually. Everything reads as mono except titles (font-display). */
+  --font-sans: 'Geist Mono Variable', ui-monospace, monospace;
+  --font-mono: 'Geist Mono Variable', ui-monospace, monospace;
+}
+
+body {
+  @apply bg-paper text-ink font-sans antialiased;
+}
