@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
-import type { Product } from "@/types/product";
-import { CATEGORY_LABELS } from "@/data/products";
+import { CATEGORY_LABELS, type Product } from "@/types/product";
 
 interface ProductCardProps {
   product: Product;

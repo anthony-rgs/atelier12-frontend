@@ -2,8 +2,7 @@ import { useEffect, useState } from "react";
 import { Link, Navigate, useParams } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { getProductBySlug } from "@/services/api";
-import type { Product } from "@/types/product";
-import { CATEGORY_LABELS } from "@/data/products";
+import { CATEGORY_LABELS, type Product } from "@/types/product";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Text } from "@/components/ui/Text";
 

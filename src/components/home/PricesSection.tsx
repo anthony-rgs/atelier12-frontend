@@ -1,56 +1,17 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import { getPrices } from '@/services/api'
+import type { PriceLine } from '@/types/price'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { Heading } from '@/components/ui/Heading'
 import { Text } from '@/components/ui/Text'
 import { Reveal } from '@/components/ui/Reveal'
 import { cn } from '@/lib/utils'
 
-interface PriceLine {
-  name: string
-  price: string
-  note?: string
-}
-
-const womenPrices: PriceLine[] = [
-  { name: 'Coupe - Brushing', price: '42 € / 45 € / 50 €' },
-  { name: 'Shampooing - Brushing', price: '23 € / 25 € / 30 € / 35 €' },
-  { name: 'Soin', price: '6 € / 10 €' },
-  { name: 'Mousse', price: '6 €' },
-  { name: 'Couleur', price: '39 €' },
-  { name: 'Couleur sans ammoniaque', price: '44 €' },
-  { name: 'Shampooing - Américain', price: '39 €' },
-  { name: 'Couleur Semi-Permanente', price: '34 €' },
-  { name: 'Dose supplémentaire', price: '10 €' },
-  { name: 'Flash', price: '20 € / 30 €' },
-  { name: 'Décoloration cheveux court', price: '60 €' },
-  { name: 'Décapage', price: '35 €' },
-  { name: 'Balayage', price: '50 € / 64 € / 74 €' },
-  {
-    name: 'Forfait - Permanente',
-    price: '80 € / 90 €',
-    note: 'Shampooing, coupe, permanente, avec ou sans ammoniaque, brush',
-  },
-  { name: 'Coupe adolescente -18 ans', price: '39 €', note: 'Cheveux courts' },
-  { name: 'Coupe enfant -10 ans', price: '20 €', note: 'Cheveux longs sur devis' },
-]
-
-const menPrices: PriceLine[] = [
-  { name: 'Shampooing brushing', price: '20 €' },
-  { name: 'Coupe', price: '27 €' },
-  { name: 'Coupe adolescent -18 ans', price: '25 €' },
-  { name: 'Coupe enfant -10 ans', price: '20 €' },
-  { name: 'Taille de barbe', price: '8 €' },
-  { name: 'Couleur', price: '34 € / 39 €' },
-  { name: 'Shampooing américain', price: '25 €' },
-  { name: 'Balayage', price: '36 € / 46 € / 56 €' },
-  { name: 'Forfait permanente', price: '67 €', note: 'Shampooing, coupe, permanente, coiffage' },
-]
-
 function PriceList({ lines }: { lines: PriceLine[] }) {
   return (
     <ul className="divide-y divide-ink/10">
       {lines.map((line) => (
-        <li key={line.name} className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between">
+        <li key={line.id} className="flex flex-col gap-1 py-4 sm:flex-row sm:items-baseline sm:justify-between">
           <div>
             <Text as="span" className="text-ink">
               {line.name}
@@ -62,7 +23,7 @@ function PriceList({ lines }: { lines: PriceLine[] }) {
             )}
           </div>
           <Text as="span" className="shrink-0 text-ink/50">
-            {line.price}
+            {line.prices.map((price) => `${price} €`).join(' / ')}
           </Text>
         </li>
       ))}
@@ -72,6 +33,13 @@ function PriceList({ lines }: { lines: PriceLine[] }) {
 
 export function PricesSection() {
   const [tab, setTab] = useState<'femme' | 'homme'>('femme')
+  const [womenPrices, setWomenPrices] = useState<PriceLine[]>([])
+  const [menPrices, setMenPrices] = useState<PriceLine[]>([])
+
+  useEffect(() => {
+    getPrices('femme').then(setWomenPrices)
+    getPrices('homme').then(setMenPrices)
+  }, [])
 
   return (
     <section className="py-24 md:py-32">

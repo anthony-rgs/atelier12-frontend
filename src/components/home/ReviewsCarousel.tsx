@@ -11,9 +11,11 @@ import { cn } from '@/lib/utils'
 const AUTO_ADVANCE_MS = 10_000
 const REVIEWS_SHOWN = 5
 
+// Shows up to `count` reviews, randomized — if there aren't more than `count` yet (e.g. only
+// a handful entered in Strapi so far), just show all of them instead of padding/erroring.
 function pickRandom<T>(list: T[], count: number): T[] {
-  const shuffled = [...list].sort(() => Math.random() - 0.5)
-  return shuffled.slice(0, count)
+  if (list.length <= count) return list
+  return [...list].sort(() => Math.random() - 0.5).slice(0, count)
 }
 
 function initials(name: string) {

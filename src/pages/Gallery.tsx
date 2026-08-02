@@ -61,7 +61,10 @@ export function Gallery() {
       <PageContainer>
         <Reveal>
           <Heading variant="eyebrow">Galerie</Heading>
-          <Heading variant="h1" className="mt-4">
+          <Heading
+            variant="h1"
+            className="mt-4"
+          >
             Dans l'atelier
           </Heading>
         </Reveal>

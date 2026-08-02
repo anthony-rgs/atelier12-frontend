@@ -1,5 +1,4 @@
-import { CATEGORY_LABELS } from '@/data/products'
-import type { ProductCategory } from '@/types/product'
+import { CATEGORY_LABELS, type ProductCategory } from '@/types/product'
 import { cn } from '@/lib/utils'
 
 const categories = Object.keys(CATEGORY_LABELS) as ProductCategory[]

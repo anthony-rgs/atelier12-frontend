@@ -1,23 +1,32 @@
+import { useEffect, useState } from 'react'
+import { getHours } from '@/services/api'
+import type { Hours } from '@/types/hours'
 import { PageContainer } from '@/components/layout/PageContainer'
 import { Heading } from '@/components/ui/Heading'
 import { Text } from '@/components/ui/Text'
 import { Reveal } from '@/components/ui/Reveal'
 import { cn } from '@/lib/utils'
 
-const hours: { day: string; hour: string }[] = [
-  { day: 'Lundi', hour: 'Fermé' },
-  { day: 'Mardi', hour: '9:00 - 18:00' },
-  { day: 'Mercredi', hour: '9:00 - 18:00' },
-  { day: 'Jeudi', hour: '9:00 - 18:00' },
-  { day: 'Vendredi', hour: '9:00 - 18:00' },
-  { day: 'Samedi', hour: '9:00 - 18:00' },
-  { day: 'Dimanche', hour: 'Fermé' },
+// Monday-first, matching the Hours type's fields.
+const days: { key: keyof Hours; label: string }[] = [
+  { key: 'lundi', label: 'Lundi' },
+  { key: 'mardi', label: 'Mardi' },
+  { key: 'mercredi', label: 'Mercredi' },
+  { key: 'jeudi', label: 'Jeudi' },
+  { key: 'vendredi', label: 'Vendredi' },
+  { key: 'samedi', label: 'Samedi' },
+  { key: 'dimanche', label: 'Dimanche' },
 ]
 
-// Monday-first index (0 = Lundi … 6 = Dimanche), matching the `hours` array above.
 const todayIndex = (new Date().getDay() + 6) % 7
 
 export function ContactMap() {
+  const [hours, setHours] = useState<Hours | null>(null)
+
+  useEffect(() => {
+    getHours().then(setHours)
+  }, [])
+
   return (
     <section className="py-24 md:py-32">
       <PageContainer>
@@ -31,18 +40,18 @@ export function ContactMap() {
 
           <div className="mt-10 grid gap-12 md:grid-cols-2 md:gap-16">
             <ul className="divide-y divide-ink/10">
-              {hours.map(({ day, hour }, i) => (
-                <li key={day} className="flex items-center justify-between py-3">
+              {days.map(({ key, label }, i) => (
+                <li key={key} className="flex items-center justify-between py-3">
                   <div className="flex items-center gap-2.5">
                     <span
                       className={cn('h-1.5 w-1.5 shrink-0', i === todayIndex ? 'bg-primary' : 'bg-transparent')}
                     />
                     <Text as="span" className="font-medium text-ink">
-                      {day}
+                      {label}
                     </Text>
                   </div>
                   <Text as="span" className={i === todayIndex ? 'text-primary' : 'text-ink/50'}>
-                    {hour}
+                    {hours?.[key] ?? '—'}
                   </Text>
                 </li>
               ))}
