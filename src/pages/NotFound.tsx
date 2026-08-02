@@ -3,8 +3,11 @@ import { PageContainer } from '@/components/layout/PageContainer'
 import { Heading } from '@/components/ui/Heading'
 import { Text } from '@/components/ui/Text'
 import { Button } from '@/components/ui/Button'
+import { usePageMeta } from '@/hooks/usePageMeta'
 
 export function NotFound() {
+  usePageMeta({ title: 'Page introuvable', noIndex: true })
+
   return (
     <PageContainer className="flex min-h-[60vh] flex-col items-center justify-center gap-6 py-32 text-center">
       <Heading variant="eyebrow">Erreur 404</Heading>

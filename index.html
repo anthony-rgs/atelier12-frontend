@@ -3,12 +3,70 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0a0a0a" />
+
+    <title>Salon de coiffure L'Atelier 12 — Paris 5ème</title>
     <meta
       name="description"
-      content="Le salon de coiffure L'Atelier est situé au cœur du 5ème arrondissement de Paris. Conseil et prestation de qualité, le tout dans une ambiance des plus conviviales. L'achat de produits est possible en magasin."
+      content="L'Atelier 12, salon de coiffure au cœur du 5ème arrondissement de Paris, à deux pas du Jardin des Plantes. Coupe, couleur, soins et produits L'Oréal — conseil et savoir-faire dans une ambiance conviviale depuis 2011."
     />
+    <link rel="canonical" href="https://latelier12.fr/" />
     <link rel="icon" href="/images/favicon.png" />
-    <title>Salon de coiffure L'Atelier 12 - Paris 5ème</title>
+
+    <!-- Open Graph / social previews -->
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="L'Atelier 12" />
+    <meta property="og:locale" content="fr_FR" />
+    <meta property="og:url" content="https://latelier12.fr/" />
+    <meta property="og:title" content="Salon de coiffure L'Atelier 12 — Paris 5ème" />
+    <meta
+      property="og:description"
+      content="Coupe, couleur, soins et produits L'Oréal au cœur du 5ème arrondissement de Paris — conseil et savoir-faire dans une ambiance conviviale depuis 2011."
+    />
+    <meta property="og:image" content="https://latelier12.fr/images/favicon.png" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Salon de coiffure L'Atelier 12 — Paris 5ème" />
+    <meta
+      name="twitter:description"
+      content="Coupe, couleur, soins et produits L'Oréal au cœur du 5ème arrondissement de Paris."
+    />
+    <meta name="twitter:image" content="https://latelier12.fr/images/favicon.png" />
+
+    <!-- Local business structured data — helps Google surface address/phone/hours directly
+         in search results. Hours mirror what's set in Strapi at the time of writing; update
+         here too if they change materially, since this block can't fetch live data. -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "L'Atelier 12",
+        "url": "https://latelier12.fr",
+        "image": "https://latelier12.fr/images/favicon.png",
+        "telephone": "+33147075928",
+        "priceRange": "€€",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "12 rue Geoffroy-Saint-Hilaire",
+          "postalCode": "75005",
+          "addressLocality": "Paris",
+          "addressCountry": "FR"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 48.8393676,
+          "longitude": 2.3546398
+        },
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "09:00",
+            "closes": "18:00"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

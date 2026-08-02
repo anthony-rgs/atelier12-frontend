@@ -7,8 +7,15 @@ import { Reveal } from "@/components/ui/Reveal";
 import { MasonryGallery } from "@/components/gallery/MasonryGallery";
 import { InfiniteGallery } from "@/components/gallery/InfiniteGallery";
 import { useIsDesktop, usePrefersReducedMotion } from "@/hooks/useMediaQuery";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export function Gallery() {
+  usePageMeta({
+    title: "Galerie",
+    description:
+      "Découvrez le salon L'Atelier 12 en images : l'intérieur, l'ambiance et les produits, au cœur du 5ème arrondissement de Paris.",
+  });
+
   const [images, setImages] = useState<GalleryImage[]>([]);
   const isDesktop = useIsDesktop();
   const reducedMotion = usePrefersReducedMotion();

@@ -8,8 +8,15 @@ import { Heading } from '@/components/ui/Heading'
 import { Reveal } from '@/components/ui/Reveal'
 import { CategoryFilter } from '@/components/products/CategoryFilter'
 import { ProductGrid } from '@/components/products/ProductGrid'
+import { usePageMeta } from '@/hooks/usePageMeta'
 
 export function Products() {
+  usePageMeta({
+    title: 'Nos produits',
+    description:
+      "Découvrez la sélection de shampoings, produits coiffants et soins L'Oréal disponibles à L'Atelier 12, salon de coiffure à Paris 5ème.",
+  })
+
   const [products, setProducts] = useState<Product[]>([])
   const [searchParams, setSearchParams] = useSearchParams()
 

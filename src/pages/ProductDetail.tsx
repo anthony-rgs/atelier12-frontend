@@ -5,6 +5,7 @@ import { getProductBySlug } from "@/services/api";
 import { CATEGORY_LABELS, type Product } from "@/types/product";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Text } from "@/components/ui/Text";
+import { usePageMeta } from "@/hooks/usePageMeta";
 
 export function ProductDetail() {
   const { slug } = useParams<{ slug: string }>();
@@ -14,6 +15,13 @@ export function ProductDetail() {
     if (!slug) return;
     getProductBySlug(slug).then((found) => setProduct(found ?? null));
   }, [slug]);
+
+  // Called unconditionally (before the early returns below) so hook order stays stable —
+  // falls back to a generic title while the product is still loading.
+  usePageMeta({
+    title: product?.name ?? "Produit",
+    description: product ? `${product.describe1} — ${product.describe2}. Disponible à L'Atelier 12.` : undefined,
+  });
 
   if (product === undefined) return null;
   if (product === null)

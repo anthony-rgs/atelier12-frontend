@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://latelier12.fr/sitemap.xml
