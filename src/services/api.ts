@@ -5,6 +5,10 @@ import type { PriceCategory, PriceLine } from '@/types/price'
 import type { Hours } from '@/types/hours'
 import { strapiFetch, mediaUrl } from './strapi'
 
+// Strapi paginates collection endpoints at 25 entries by default — this disables it so list
+// queries always return everything (fine at this catalogue's size; revisit if it grows a lot).
+const NO_PAGINATION = 'pagination[limit]=-1'
+
 // Data-access layer backed by the Strapi API. Components only ever call the functions below —
 // the raw Strapi response shapes (with `populate`d media, Strapi v5's flat attributes, etc.)
 // are mapped to the app's own types right here, so a future API change only touches this file.
@@ -75,7 +79,7 @@ function toProduct(raw: StrapiProduct): Product {
 export async function getProducts(category?: ProductCategory): Promise<Product[]> {
   const filter = category ? `&filters[category][$eq]=${category}` : ''
   const { data } = await strapiFetch<StrapiListResponse<StrapiProduct>>(
-    `/api/products?populate=image${filter}`,
+    `/api/products?populate=image${filter}&${NO_PAGINATION}`,
   )
   return data.map(toProduct)
 }
@@ -88,7 +92,9 @@ export async function getProductBySlug(slug: string): Promise<Product | undefine
 }
 
 export async function getReviews(): Promise<Review[]> {
-  const { data } = await strapiFetch<StrapiListResponse<StrapiReview>>('/api/reviews')
+  const { data } = await strapiFetch<StrapiListResponse<StrapiReview>>(
+    `/api/reviews?${NO_PAGINATION}`,
+  )
   return data.map((review) => ({
     id: String(review.id),
     name: review.name,
@@ -99,7 +105,7 @@ export async function getReviews(): Promise<Review[]> {
 
 export async function getGalleryImages(): Promise<GalleryImage[]> {
   const { data } = await strapiFetch<StrapiListResponse<StrapiGalleryPhoto>>(
-    '/api/gallery-photos?populate=image&sort=order:asc',
+    `/api/gallery-photos?populate=image&sort=order:asc&${NO_PAGINATION}`,
   )
   return data.map((photo) => ({
     id: String(photo.id),
@@ -111,7 +117,7 @@ export async function getGalleryImages(): Promise<GalleryImage[]> {
 
 export async function getPrices(category: PriceCategory): Promise<PriceLine[]> {
   const { data } = await strapiFetch<StrapiListResponse<StrapiPriceLine>>(
-    `/api/price-lines?populate=prices&sort=order:asc&filters[category][$eq]=${category}`,
+    `/api/price-lines?populate=prices&sort=order:asc&filters[category][$eq]=${category}&${NO_PAGINATION}`,
   )
   return data.map((line) => ({
     id: String(line.id),
