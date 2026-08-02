@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { ArrowUpRight } from "lucide-react";
 import { getGalleryImages } from "@/services/api";
 import type { GalleryImage } from "@/types/gallery";
+import { shuffle } from "@/lib/utils";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Heading } from "@/components/ui/Heading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -13,7 +14,7 @@ export function GalleryTeaser() {
   const [images, setImages] = useState<GalleryImage[]>([]);
 
   useEffect(() => {
-    getGalleryImages().then((all) => setImages(all.slice(0, PREVIEW_COUNT)));
+    getGalleryImages().then((all) => setImages(shuffle(all).slice(0, PREVIEW_COUNT)));
   }, []);
 
   if (images.length === 0) return null;

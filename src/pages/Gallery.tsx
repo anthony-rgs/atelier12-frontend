@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { getGalleryImages } from "@/services/api";
 import type { GalleryImage } from "@/types/gallery";
+import { shuffle } from "@/lib/utils";
 import { PageContainer } from "@/components/layout/PageContainer";
 import { Heading } from "@/components/ui/Heading";
 import { Reveal } from "@/components/ui/Reveal";
@@ -22,7 +23,7 @@ export function Gallery() {
   const showInfiniteGallery = isDesktop && !reducedMotion;
 
   useEffect(() => {
-    getGalleryImages().then(setImages);
+    getGalleryImages().then((all) => setImages(shuffle(all)));
   }, []);
 
   // Fullscreen desktop mode owns its own scroll (wheel/keys drive the 3D scene) — the page
