@@ -5,9 +5,10 @@ import type { PriceCategory, PriceLine } from '@/types/price'
 import type { Hours } from '@/types/hours'
 import { strapiFetch, mediaUrl } from './strapi'
 
-// Strapi paginates collection endpoints at 25 entries by default — this disables it so list
-// queries always return everything (fine at this catalogue's size; revisit if it grows a lot).
-const NO_PAGINATION = 'pagination[limit]=-1'
+// Strapi paginates collection endpoints at 25 entries by default. `pagination[limit]=-1`
+// (the documented "disable pagination" flag) gets clamped down to 1 result on this Strapi
+// instance instead, so we ask for a page big enough to cover everything instead.
+const NO_PAGINATION = 'pagination[pageSize]=100'
 
 // Data-access layer backed by the Strapi API. Components only ever call the functions below —
 // the raw Strapi response shapes (with `populate`d media, Strapi v5's flat attributes, etc.)
