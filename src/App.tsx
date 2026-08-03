@@ -4,6 +4,7 @@ import { Home } from "@/pages/Home";
 import { Products } from "@/pages/Products";
 import { ProductDetail } from "@/pages/ProductDetail";
 import { Gallery } from "@/pages/Gallery";
+import { PdfExport } from "@/pages/PdfExport";
 import { NotFound } from "@/pages/NotFound";
 
 export default function App() {
@@ -25,6 +26,10 @@ export default function App() {
         <Route
           path="galery"
           element={<Gallery />}
+        />
+        <Route
+          path="pdf"
+          element={<PdfExport />}
         />
         <Route
           path="*"
