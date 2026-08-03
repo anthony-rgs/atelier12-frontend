@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     borderBottomColor: LINE,
   },
   name: {
-    fontSize: 10.5,
+    fontSize: 13,
     color: INK,
   },
   note: {
@@ -70,7 +70,7 @@ const styles = StyleSheet.create({
     maxWidth: 340,
   },
   price: {
-    fontSize: 10.5,
+    fontSize: 13,
     color: INK_SOFT,
   },
   footer: {

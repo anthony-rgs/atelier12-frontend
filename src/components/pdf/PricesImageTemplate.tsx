@@ -38,10 +38,10 @@ export const PricesImageTemplate = forwardRef<HTMLDivElement, PricesImageTemplat
           {lines.map((line) => (
             <li key={line.id} className="flex items-start justify-between gap-6 border-b border-line py-4">
               <div>
-                <p className="font-mono text-base text-ink">{line.name}</p>
+                <p className="font-mono text-lg text-ink">{line.name}</p>
                 {line.note && <p className="mt-1 font-mono text-xs italic text-ink-soft">{line.note}</p>}
               </div>
-              <p className="shrink-0 font-mono text-base text-ink-soft">
+              <p className="shrink-0 font-mono text-lg text-ink-soft">
                 {line.prices.map((price) => `${price} €`).join(' / ')}
               </p>
             </li>
